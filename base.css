@@ -1,0 +1,179 @@
+body {
+  width: 100%;
+  height: 100%; }
+
+.wrapper-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: url(/images/video-bg.jpg) center center/cover no-repeat; }
+
+.wrapper-content {
+  min-width: 974px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 12px 80px; }
+
+.header {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  font-size: 13px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .header__col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header__col-right {
+    margin-right: 30px; }
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  display: inline-block;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase; }
+
+.menu__item {
+  margin-left: 30px;
+  display: inline-block; }
+  .menu__item-link {
+    text-decoration: none;
+    color: #ffffff; }
+  .menu__item-link:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff; }
+
+.button__order {
+  padding: 13px 15px;
+  background-color: #e45028;
+  border-radius: 2px;
+  border: 5px solid transparent;
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase; }
+  .button__order:hover {
+    background-color: #c1401e; }
+
+.main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.banner {
+  width: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.banner__pic {
+  width: 50%;
+  position: relative; }
+  .banner__pic-drops {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("/images/drops.png") center 68px no-repeat; }
+  .banner__pic-img {
+    position: absolute;
+    right: 0;
+    display: inline-block; }
+
+.banner__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.banner__title {
+  margin-top: 22px;
+  font-family: "Lifehack";
+  font-weight: 500;
+  letter-spacing: -1.63px;
+  font-size: 65px;
+  color: #fff;
+  line-height: 60px; }
+
+.headline {
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 85px;
+  margin: 0;
+  margin-top: 128px; }
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff; }
+  .pagination__list__item {
+    margin-bottom: 15px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    position: relative; }
+  .pagination__list__item__link {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff; }
+  .pagination__list__item-active {
+    border-color: #fff; }
