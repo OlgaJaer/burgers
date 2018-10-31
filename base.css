@@ -21,7 +21,7 @@ body {
   background: url(/images/video-bg.jpg) center center/cover no-repeat; }
 
 .wrapper-content {
-  min-width: 974px;
+  width: 974px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +32,7 @@ body {
   margin: 12px 80px; }
 
 .header {
-  font-family: Ubuntu;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   font-size: 13px;
@@ -56,29 +56,27 @@ body {
 .menu__list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   color: #fff;
-  display: inline-block;
   line-height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Ubuntu;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase; }
 
 .menu__item {
-  margin-left: 30px;
+  margin-left: 20px;
   display: inline-block; }
   .menu__item-link {
     text-decoration: none;
     color: #ffffff; }
-  .menu__item-link:before {
+  .menu__item:before {
     content: '';
     display: inline-block;
-    vertical-align: middle;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -90,7 +88,7 @@ body {
   border-radius: 2px;
   border: 5px solid transparent;
   color: #fff;
-  font-family: Ubuntu;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase; }
@@ -115,7 +113,7 @@ body {
   justify-content: space-between; }
 
 .banner__pic {
-  width: 50%;
+  width: 100%;
   position: relative; }
   .banner__pic-drops {
     width: 100%;
@@ -138,7 +136,7 @@ body {
 
 .banner__title {
   margin-top: 22px;
-  font-family: "Lifehack";
+  font-family: Lifehack, Arial, Helvetica, sans-serif;
   font-weight: 500;
   letter-spacing: -1.63px;
   font-size: 65px;
@@ -147,7 +145,7 @@ body {
 
 .headline {
   color: #f9b43b;
-  font-family: Gagalin;
+  font-family: Gagalin, Arial, Helvetica, sans-serif;
   font-size: 72px;
   font-weight: 400;
   line-height: 85px;
@@ -157,7 +155,7 @@ body {
 .pagination__list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   color: #fff; }
   .pagination__list__item {
     margin-bottom: 15px;
@@ -166,11 +164,13 @@ body {
     border-radius: 50%;
     border: 1px solid transparent;
     position: relative; }
-  .pagination__list__item__link {
-    display: block;
+  .pagination__list__item-link {
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 6px;
     height: 6px;
     border-radius: 50%;
