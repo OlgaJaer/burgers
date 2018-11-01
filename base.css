@@ -18,7 +18,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: url(images/video-bg.jpg) center center/cover no-repeat; }
+  background: url("images/video-bg.jpg") center center/cover no-repeat; }
 
 .wrapper-content {
   width: 974px;
@@ -32,7 +32,7 @@ body {
   margin: 12px 80px; }
 
 .header {
-  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   font-size: 13px;
@@ -62,7 +62,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 30px;
@@ -97,7 +97,7 @@ body {
   border-radius: 5px;
   border: 5px solid transparent;
   color: #fff;
-  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase; }
@@ -149,7 +149,7 @@ body {
 
 .banner__title {
   margin-top: 22px;
-  font-family: Lifehack, Arial, Helvetica, sans-serif;
+  font-family: 'Lifehack', Arial, Helvetica, sans-serif;
   font-weight: 500;
   letter-spacing: -1.63px;
   font-size: 65px;
@@ -158,7 +158,7 @@ body {
 
 .headline {
   color: #f9b43b;
-  font-family: Gagalin, Arial, Helvetica, sans-serif;
+  font-family: 'Gagalin', Arial, Helvetica, sans-serif;
   font-size: 72px;
   font-weight: 400;
   line-height: 85px;
