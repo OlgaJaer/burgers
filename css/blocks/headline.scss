@@ -1,0 +1,11 @@
+.headline {
+  @include headline;
+  margin: 0;
+  margin-top: 128px;
+
+  &--best {
+    color: #2f3234;
+    margin: 10% auto;
+    padding: 1%;
+  }
+}

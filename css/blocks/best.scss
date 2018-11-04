@@ -1,0 +1,52 @@
+.best {
+  flex-direction: column;
+  background: url("../images/bg/bg.jpg") center center / cover no-repeat;
+}
+
+.mnct {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item-title {
+    @include title;
+    color: #2f3234;
+    font-size: 24px;
+    line-height: 28.14px;
+    letter-spacing: -0.6px;
+  }
+
+  &__item-text {
+    opacity: 0.8;
+    color: #2f3234;
+    line-height: 24.02px;
+    margin-bottom: 25px;
+    text-align: justify;
+    padding: 18px;
+  }
+
+
+  &__item-img {
+    width: 97px;
+    height: 89px;
+    margin-bottom: 33px;
+
+    &--meat {
+      background: url("../images/meat.png") center center no-repeat;
+    }
+
+    &--hand {
+      background: url("../images/hand.png") center center no-repeat;
+    }
+
+    &--natural {
+      background: url("../images/natural.png") center center no-repeat;
+    }
+  }
+}
