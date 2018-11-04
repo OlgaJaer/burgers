@@ -5,18 +5,32 @@ $bghover: #c1401e;
 $red: #e35028;
 $black: #2f3234;
 
-@import "_misc/normalize.scss";
+@mixin title {
+  font-family: 'Lifehack', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
 
-@import "_misc/mixins.scss";
+@mixin headline {
+  color: $yellow;
+  font-family: 'Gagalin', Arial, Helvetica, sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 85px;
+}
+
+@import "_misc/normalize.scss";
 @import "_misc/fonts.scss";
+@import "_misc/mixins.scss";
+
 @import "_misc/layout.scss";
 
 //blocks
+@import "blocks/btn.scss";
+@import "blocks/headline.scss";
 @import "blocks/hero.scss";
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
-@import "blocks/btn.scss";
-@import "blocks/headline.scss";
+
 @import "blocks/pagination.scss";
 @import "blocks/best.scss";
 @import "blocks/reviews.scss";

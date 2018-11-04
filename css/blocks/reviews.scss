@@ -11,6 +11,8 @@
   position: relative;
   width: 25%;
   height: 50%;
+  filter: grayscale(1);
+ 
 
   &-layer {
     position: absolute;
@@ -23,9 +25,9 @@
 
   &-img {
     display: block;
-    max-width: 100%;
-    filter: grayscale(1);
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
+   
   }
 
   &-layer:hover {
