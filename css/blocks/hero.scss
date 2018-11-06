@@ -1,7 +1,7 @@
 .hero {
-  background: url("../images/bg/video-bg.jpg") center center / cover no-repeat;  
+  background: url("../images/bg/video-bg.jpg") center center / cover no-repeat;
 }
- 
+
 .hero__content {
   margin-bottom: 11%;
   width: 100%;
@@ -20,7 +20,7 @@
     position: absolute;
     background-image: url("../images/drops.png");
     background-repeat: no-repeat;
-    background-position: center 68px; 
+    background-position: center 68px;
   }
 
   &-img {
@@ -34,10 +34,20 @@
   width: 100%;
 }
 
-.hero__content__title {
+.hero__content-headline {
+  line-height: 125px;
+}
+
+.hero__content-title {
   @include title;
   letter-spacing: -1.63px;
   font-size: 65px;
   color: #fff;
   line-height: 60px;
+}
+
+.navigation__next-img {
+  background: url("../images/arrow-scroll.png") center center no-repeat;
+  width: 29px;
+  height: 14px;
 }
