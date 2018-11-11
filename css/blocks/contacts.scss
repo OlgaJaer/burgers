@@ -1,0 +1,93 @@
+.contacts {
+  position: relative;
+  background: url("../images/bg/map.png") center center / cover no-repeat;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2f3234;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  padding: rem(10px) rem(80px);
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer__col--right {
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  @include phones {
+    margin-top: rem(10px);
+  }
+}
+
+.adress {
+  font-style: normal;
+
+  &__text {
+    color: #ffffff;
+    line-height: rem(24px);
+  }
+
+  &__phone-link {
+    text-decoration: none;
+    color: $red;
+    margin-left: 20px;
+
+    &:before {
+      content: ""; 
+      display: inline-block;
+      background: url("../images/sprite.svg#phone") center center no-repeat;
+      width: 12px;
+      height: 12px;
+     
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    width: rem(23px);
+    height: rem(23px);
+    margin-left: rem(19px);
+  }
+
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-vk {
+  width: rem(23px);
+  height: rem(13px);
+}
+
+.icon-fb {
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.icon-inst {
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.icon-twitter {
+  width: rem(20px);
+  height: rem(16px);
+}

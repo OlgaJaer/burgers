@@ -6,6 +6,6 @@
 @mixin headline {
   color: $yellow;
   font-family: 'Gagalin', Arial, Helvetica, sans-serif;
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: 400;
 }

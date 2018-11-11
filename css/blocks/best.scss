@@ -1,52 +1,87 @@
 .best {
-  flex-direction: column;
+  position: relative;
   background: url("../images/bg/bg.jpg") center center / cover no-repeat;
+
+  @include tablets {
+    background: url("../images/bg/bg-768.jpg") center center / cover no-repeat;
+
+  }
+}
+
+.container--best {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
 }
 
 .mnct {
   display: flex;
   justify-content: center;
+  padding-bottom: 7%; // rem(20px)
+
+  @include phones {
+    flex-direction: column;
+  }
 
   &__item {
     width: 33%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include phones {
+      flex-direction: initial;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &-desc {
+      text-align: center;
+
+      @include phones {
+        padding-left: 60px;
+        text-align: left;
+      }
+    }
   }
 
   &__item-title {
     @include title;
     color: #2f3234;
-    font-size: 24px;
-    line-height: 28.14px;
-    letter-spacing: -0.6px;
+    font-size: rem(24px);
+    line-height: rem(28.14px);
+    letter-spacing: rem(-0.6px);
+
+    @include phones {
+      font-size: rem(26px);
+      margin-bottom: 0;
+    }
   }
 
   &__item-text {
     opacity: 0.8;
     color: #2f3234;
-    line-height: 24.02px;
-    margin-bottom: 25px;
+    line-height: rem(24.02px);
+    //margin-bottom: rem(25px);
     text-align: justify;
-    padding: 18px;
-  }
+    padding: 6%; //rem(18px);
 
+    @include phones {
+      font-size: 14px;
+      line-height: 24.06px;
+      padding: 6% 0;
+    }
+  }
 
   &__item-img {
-    width: 97px;
-    height: 89px;
-    margin-bottom: 33px;
-
-    &--meat {
-      background: url("../images/meat.png") center center no-repeat;
-    }
-
-    &--hand {
-      background: url("../images/hand.png") center center no-repeat;
-    }
-
-    &--natural {
-      background: url("../images/natural.png") center center no-repeat;
-    }
+    width: rem(97px);
+    height: rem(89px);
+    margin-bottom: 12%; //rem(33px);
   }
+
+  width: 90%;
+ 
 }

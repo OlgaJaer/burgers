@@ -5,6 +5,7 @@
 .reviews__list {
   display: flex;
   flex-flow: row wrap;
+  height: 100%;
 }
 
 .reviews__item {
@@ -12,7 +13,11 @@
   width: 25%;
   height: 50%;
   filter: grayscale(1);
- 
+
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  }
 
   &-layer {
     position: absolute;
@@ -25,34 +30,54 @@
 
   &-img {
     display: block;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-   
-  }
 
-  &-layer:hover {
-    background-color: rgba(20, 20, 20, 0.7);
-    transition: all .5s;
   }
 
   &-content {
     opacity: 0;
     color: #ffffff;
-    line-height: 24px;
-    padding: 50px 20px;
+    line-height: rem(24px);
+    padding: rem(50px) rem(20px);
     transition: all 1s;
-  }
 
-  &-content:hover {
-    opacity: 1;
-    transition: all 1s;
-    transform: scale(1);
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &-title {
     @include headline;
-    font-size: 14px;
+    font-size: rem(14px);
     color: #ffffff;
-    line-height: 28.11px;
+    line-height: rem(28.11px);
+
+    @include phones {
+      font-size: 24px;
+    }
+  }
+
+  &-text {
+
+    @include tablets {
+      margin-bottom: 5%;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.reviews__item-layer:hover {
+  background-color: rgba(20, 20, 20, 0.7);
+  transition: all .5s;
+
+  .reviews__item-content {
+    opacity: 1;
+    transition: all 1s;
+    transform: scale(1);
   }
 }

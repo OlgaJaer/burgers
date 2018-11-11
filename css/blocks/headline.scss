@@ -1,11 +1,26 @@
 .headline {
   @include headline;
-  line-height: 30px;
-  margin-top: 23%;
 
+  &--hero {
+
+    line-height: rem(30px);
+    margin-top: 23%;
+  }
 
   &--best {
     color: #2f3234;
-    margin: 15% auto 7% auto;
+    text-align: center;
+
+    @include phones {
+      font-size: 50px;
+    }
+  }
+
+  &--team {
+    margin-top: 0;
+  }
+
+  &--menu {
+    color: #fff;
   }
 }

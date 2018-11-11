@@ -1,0 +1,87 @@
+.burgers-menu {
+  display: flex;
+  background: url("../images/bg/menu.jpg") center center / cover no-repeat;
+}
+
+.container--menu {
+  width: rem(270px);
+  display: flex;
+  justify-content: center;
+  padding-top: rem(110px);
+}
+
+.container--acc {
+  min-width: rem(840px);
+  width: 75%;
+  min-height: 100vh;
+}
+
+.menu-acc {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  list-style: none;
+
+  &__item {
+    height: 100vh;
+    float: left;
+  }
+}
+
+.menu-acc__item-trigger {
+  height: 100vh;
+  width: rem(80px);
+  background-color: rgba(20, 20, 20, 0.7);
+  position: relative;
+  float: left;
+  background-color: #cfd8dc;
+  ;
+
+  & h3 {
+    @include headline;
+    color: #fff;
+    opacity: 1;
+    font-size: rem(40px);
+    font-weight: 400;
+    align-items: center;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 70%;
+    left: -100%;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+}
+
+.menu-acc__text {
+  height: 100vh;
+  color: #ffffff;
+  line-height: rem(24px);
+  background-color: #2f3234;
+  opacity: 0.93;
+  float: left;
+  overflow: hidden;
+  width: 0;
+
+  &-content {
+    padding: rem(20px);
+  }
+
+  &-active {
+    //  width: rem(621px);
+  }
+}
+
+.menu-acc__item-meat {
+  background: url("../images/bg/photo-meat.jpg") center center / cover no-repeat;
+  
+}
+
+.menu-acc__item-vegan {
+  background: url("../images/bg/photo-vegan.jpg") center center / cover no-repeat;
+}
+
+.menu-acc__item-diet {
+  background: url("../images/bg/photo-diet.jpg") center center / cover no-repeat;
+}

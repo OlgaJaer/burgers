@@ -2,16 +2,21 @@
   position: fixed;
   top: 11%;
   right: 6%;
+
+  @include tablets {
+    display: none;
+  }
 }
+
 .pagination__list {
   color: #ffffff;
 
   &__item {
-    margin-bottom: 8px;
-    width: 14px;
-    height: 14px;
+    margin-bottom: rem(8px);
+    width: rem(14px);
+    height: rem(14px);
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     position: relative;
   }
 
@@ -25,15 +30,23 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     border-radius: 50%;
     background-color: #fff;
   }
 
 }
 
-.navigation__next {
-  display: flex;
-  justify-content: center;
+.navigation {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+
 }
+
+.arrow-scroll {
+      width: rem(30px);
+      height: rem(15px);
+    }
+

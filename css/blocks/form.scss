@@ -1,8 +1,128 @@
 .order {
-  background: #000;
+  display: flex;
+  position: relative;
+  background: url("../images/bg/bg-texture.png") center center / cover no-repeat;
+  background-color: #000000;
+  opacity: 0.9;
+}
+
+.container--order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
 }
 
 .form {
-  color: #fff;
-  
+  display: flex;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  margin-left: -5%;
+
+  @include tablets {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  &__col {
+    width: 45%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(20px);
+
+    @include tablets {
+    width: 100%;
+    margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: rem(19px);
+  }
+
+  &__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-title {
+      margin-bottom: rem(7px);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    color: #2f3234;
+    border-radius: rem(4px);
+    border: rem(2px) solid transparent;
+    padding: rem(11px) rem(20px);
+
+    &:focus {
+      border-color: $yellow;
+    }
+
+    &-textarea {
+      resize: vertical;
+      padding: rem(10px);
+      min-height: rem(110px);
+    }
+  }
+
+  &__radio {
+    display: inline-flex;
+    margin-right: rem(20px);
+
+    &-real {
+      display: none;
+    }
+
+    &-visible {
+
+      position: relative;
+      padding-left: 20px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: rem(5px);
+        height: rem(5px);
+        border-radius: 50%;
+        vertical-align: middle;
+
+        &:focus {
+          border: rem(1px) solid $orange;
+          background-color: $orange;
+        }
+        
+      }
+
+      
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background-color: #ffffff;
+        margin-left: -25px;
+      }
+    }
+  }
 }

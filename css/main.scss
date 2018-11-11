@@ -5,10 +5,15 @@ $bghover: #c1401e;
 $red: #e35028;
 $black: #2f3234;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 @import "_misc/normalize.scss";
+@import "_misc/media.scss";
+
 @import "_misc/fonts.scss";
 @import "_misc/mixins.scss";
-
 @import "_misc/layout.scss";
 
 //blocks
@@ -18,7 +23,12 @@ $black: #2f3234;
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
 
-@import "blocks/pagination.scss";
+
 @import "blocks/best.scss";
 @import "blocks/reviews.scss";
 @import "blocks/team.scss";
+@import "blocks/menu.scss";
+@import "blocks/form.scss";
+@import "blocks/contacts.scss";
+@import "blocks/pagination.scss";
+

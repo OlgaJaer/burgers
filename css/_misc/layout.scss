@@ -1,13 +1,22 @@
 html,
 body {
   height: 100%;
+  font-size: 14px;
+
+  @include tablets {
+    font-size: 12px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
 }
 
 body {
   position: relative;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   color: $black;
-  font-size: 14px;
+  
   font-weight: 300;
   -webkit-font-smoothing: antialiansed;
   -moz-osx-font-smoothing: grayscale;
@@ -15,8 +24,6 @@ body {
 
 .wrap {
   position: relative;
-  width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
@@ -24,9 +31,14 @@ body {
 .container {
   position: relative;
   margin: 0 auto;
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
+
+  @include tablets {
+    width: 95%;
+  }
 }
 
 h1,

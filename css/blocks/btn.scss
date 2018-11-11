@@ -1,10 +1,10 @@
 .btn {
-  padding: 7px 11px;
+  padding: rem(7px) rem(11px);
   background-color: $orange;
-  border-radius: 5px;
-  border: 5px solid transparent;
+  border-radius: rem(5px);
+  border: rem(1px) solid transparent;
   color: #fff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
@@ -16,10 +16,23 @@
 
   &--black {
     background-color: $black;
+
+    @include tablets {
+      padding: 4% 9%;
+    }
+
+    @include phones {
+      font-size: 13px;
+    }
   }
 
   &--black:hover {
     background-color: #1f2122;
     transition: all .3s;
   }
+}
+
+.form__button-clean {
+  border-color: transparent;
+  background: transparent;
 }

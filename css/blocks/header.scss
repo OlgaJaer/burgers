@@ -1,10 +1,10 @@
 .header {
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
+  padding-top: rem(12px);
 
   &__col {
     display: flex;
@@ -12,6 +12,56 @@
   }
 
   &__col-center {
-    margin-left: 5px;
+    margin-left: rem(5px);
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  width: rem(92px);
+  height: rem(69px);
+}
+
+.header__col-rigth {
+  margin-right: rem(20px);
+}
+
+.hamburger-menu-link {
+  display: none;
+  position: relative;
+
+  @include tablets {
+    display: flex;
+  }
+
+  &,
+  &:before,
+  &:after {
+    content: "";
+    width: rem(24px);
+    height: rem(4px);
+    background: #ffffff;
+    border-radius: rem(3px);
+    margin-bottom: rem(10px);
+    margin-top: rem(10px);
+
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+  }
+
+  &:after {
+    top: 100%;
+    margin-top: rem(4px);
+  }
+
+  &:before {
+    bottom: 100%;
+    margin-bottom: rem(4px);
   }
 }
