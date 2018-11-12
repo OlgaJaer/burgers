@@ -42,15 +42,15 @@
   &__phone-link {
     text-decoration: none;
     color: $red;
-    margin-left: 20px;
+    font-weight: 700;
 
     &:before {
-      content: ""; 
+      content: "";
       display: inline-block;
-      background: url("../images/sprite.svg#phone") center center no-repeat;
+      background: url("../images/icons/phone.svg") center center no-repeat;
       width: 12px;
       height: 12px;
-     
+      margin-right: rem(5px);
     }
   }
 }

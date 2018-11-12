@@ -72,12 +72,12 @@
       <section class="section best">
         <div class="container container--best">
           <h2 class="headline headline--best">Мы лучшие</h2>
-          <main class="mnct">
+          <div class="mnct">
             <section class="mnct__item">
               <div class="mnct__item-img ">
-                <svg class="img--meat">
-                  <use xlink:href="images/sprite.svg#meat"></use>
-                </svg>
+                <img src="images/icons/meat.svg" class="img--meat">
+                 <!-- <use xlink:href="images/sprite.svg#meat"></use>-->
+
               </div>
               <div class="mnct__item-desc">
                 <h3 class="mnct__item-title">100% свежее мясо</h3>
@@ -90,9 +90,9 @@
             </section>
             <section class="mnct__item">
               <div class="mnct__item-img ">
-                <svg class="img--hand">
-                  <use xlink:href="images/sprite.svg#hand"></use>
-                </svg>
+                <img src="images/icons/hand.svg"  class="img--hand">
+                 <!-- <use xlink:href="images/sprite.svg#hand"></use>-->
+               
               </div>
               <div class="mnct__item-desc">
                 <h3 class="mnct__item-title">Ручная сборка</h3>
@@ -105,9 +105,9 @@
             </section>
             <section class="mnct__item">
               <div class="mnct__item-img">
-                <svg class="img--natural">
-                  <use xlink:href="images/sprite.svg#natural"></use>
-                </svg>
+                <img src="images/icons/natural.svg"  class="img--natural">
+                  <!--<use xlink:href="images/sprite.svg#natural"></use>-->
+               
               </div>
               <div class="mnct__item-desc">
                 <h3 class="mnct__item-title">Натуральные <br>
@@ -119,9 +119,13 @@
                 </div>
               </div>
             </section>
-          </main>
+          </div>
 
         </div>
+
+      </section>
+
+      <section class="section burgers">
 
       </section>
 
@@ -131,7 +135,7 @@
             <h2 class="headline headline--team">команда</h2>
             <ul class="team-acc">
               <li class="team-acc__item team-acc__item-active">
-                <a href="#" class="team-acc__item-trigger"> Дэниэл Редклиф</a>
+                <button class="team-acc__item-trigger"> Дэниэл Редклиф</button>
                 <section class="team-acc__desc">
                   <div class="team-acc__pic"><img src="./images/content/team/Slice_1.jpg" class="team-acc__pic-img" alt="фото  Дэниэла Редклифа">
                   </div>
@@ -142,8 +146,8 @@
                   </div>
                 </section>
               </li>
-              <li class="team-acc__item">
-                <a href="#" class="team-acc__item-trigger">Ричард Джеймс</a>
+            <li class="team-acc__item">
+                <button class="team-acc__item-trigger">Ричард Джеймс</button> 
                 <section class="team-acc__desc">
                   <div class="team-acc__pic"> <img src="./images/content/team/Slice_1.jpg" class="team-acc__pic-img"
                       alt="фото Ричарда Джеймса"> </div>
@@ -155,7 +159,7 @@
                 </section>
               </li>
               <li class="team-acc__item">
-                <a href="#" class="team-acc__item-trigger">Джейк Финн</a>
+                <button class="team-acc__item-trigger">Джейк Финн</button>
                 <section class="team-acc__desc">
                   <div class="team-acc__pic"> <img src="./images/content/team/Slice_1.jpg" class="team-acc__pic-img"
                       alt="фото Джейк Финн"> </div>
@@ -167,7 +171,7 @@
                 </section>
               </li>
               <li class="team-acc__item">
-                <a href="#" class="team-acc__item-trigger">Николай Иванов</a>
+                <button class="team-acc__item-trigger">Николай Иванов</button>
                 <section class="team-acc__desc">
                   <div class="team-acc__pic"> <img src="./images/content/team/Slice_1.jpg" class="team-acc__pic-img"
                       alt="фото Николая Иванова"> </div>
@@ -188,14 +192,13 @@
       <section class="section burgers-menu">
         <div class="container--menu">
           <h2 class="headline headline--menu">Меню</h2>
-
         </div>
-        <div class="container--acc">
+        
           <ul class="menu-acc">
             <li class="menu-acc__item">
-              <a href="#" class="menu-acc__item-trigger menu-acc__item-meat">
+              <button class="menu-acc__item-trigger menu-acc__item-trigger__active menu-acc__item-meat">
                 <h3>Для мясоедов</h3>
-              </a>
+              </button>
               <div class="menu-acc__text menu-acc__text-active">
                 <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
                   заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
@@ -209,9 +212,9 @@
               </div>
             </li>
             <li class="menu-acc__item">
-              <a href="#" class="menu-acc__item-trigger menu-acc__item-vegan">
+              <button class="menu-acc__item-trigger menu-acc__item-vegan">
                 <h3>Вегетарианское</h3>
-              </a>
+              </button>
               <div class="menu-acc__text">
                 <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
                   заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
@@ -225,9 +228,9 @@
               </div>
             </li>
             <li class="menu-acc__item">
-              <a href="#" class="menu-acc__item-trigger menu-acc__item-diet">
+              <button class="menu-acc__item-trigger menu-acc__item-diet">
                 <h3>Диетическое</h3>
-              </a>
+              </button>
               <div class="menu-acc__text">
                 <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
                   заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
@@ -241,7 +244,6 @@
               </div>
             </li>
           </ul>
-        </div>
 
       </section>
 
@@ -353,6 +355,10 @@
         </ul>
       </section>
 
+      <section class="section work">
+
+      </section>
+
       <section class="section order">
         <div class="container container--order">
           <h2 class="headline">Закажите доставку</h2>
@@ -394,7 +400,7 @@
               </div>
             </div>
 
-            <div class="form__col">
+            <div class="form__col form__col-rigth">
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__block-title">Комментарий</div>
@@ -402,26 +408,29 @@
                 </label>
               </div>
               <div class="form__row">
-                <label for="" class="form__radio">
+                <label class="form__radio">
                   <input type="radio" class="form__radio-real" name="payment">
-                  <div class="form__radio-visible">Потребуется сдача </div>
+                  <div class="form__radio-visible"> </div>
+                  <div class="form__radio-title">Потребуется сдача</div>
                 </label>
-                <label for="" class="form__radio">
+                <label class="form__radio">
                   <input type="radio" class="form__radio-real" name="payment">
-                  <div class="form__radio-visible">Оплата по карте </div>
+                  <div class="form__radio-visible"> </div>
+                  <div class="form__radio-title">Оплата по карте</div>
                 </label>
 
               </div>
               <div class="form__row">
-                <label for="" class="check">
-                  <input type="checkbox" class="form__check-real">
-                  <div class="form__check-visible">Не перезванивать</div>
+                <label class="form__radio form__checkbox">
+                  <input type="checkbox" class="form__radio-real" name="callback" >
+                  <div class="form__radio-visible"></div>
+                  <div class="form__radio-title">Не перезванивать</div>
                 </label>
               </div>
               <div class="form__row">
                 <div class="form__block">
-                  <button class="form__button-order btn">Заказать</button>
-                  <button class="form__button-clean btn">Очистить</button>
+                  <input class="form__button-order btn" type="submit" value="Заказать" >
+                  <input class="form__button-clean btn" type="reset" value="Очистить">
                 </div>
               </div>
             </div>

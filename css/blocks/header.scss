@@ -18,6 +18,12 @@
       display: none;
     }
   }
+
+  &__col-rigth {
+    @include tablets {
+      margin-left: auto;
+    }
+  }
 }
 
 .logo {

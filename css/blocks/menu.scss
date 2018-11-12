@@ -1,41 +1,34 @@
 .burgers-menu {
-  display: flex;
+  position: relative;
   background: url("../images/bg/menu.jpg") center center / cover no-repeat;
 }
 
 .container--menu {
-  width: rem(270px);
-  display: flex;
-  justify-content: center;
-  padding-top: rem(110px);
-}
-
-.container--acc {
-  min-width: rem(840px);
-  width: 75%;
-  min-height: 100vh;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 .menu-acc {
   position: absolute;
-  height: 100vh;
+  bottom: 0;
   right: 0;
-  list-style: none;
+  top: 0;
+  display: flex;
 
   &__item {
-    height: 100vh;
-    float: left;
+    height: 100%;
   }
 }
 
 .menu-acc__item-trigger {
-  height: 100vh;
   width: rem(80px);
+  height: 100%;
   background-color: rgba(20, 20, 20, 0.7);
   position: relative;
   float: left;
   background-color: #cfd8dc;
-  ;
+  border: transparent;
 
   & h3 {
     @include headline;
@@ -44,18 +37,18 @@
     font-size: rem(40px);
     font-weight: 400;
     align-items: center;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
     position: absolute;
-    top: 70%;
-    left: -100%;
+    top: 100%;
+    left: 50%;
     white-space: nowrap;
-    margin-bottom: 0;
+    margin-top: rem(-20px);
   }
 }
 
 .menu-acc__text {
-  height: 100vh;
+  height: 100%;
   color: #ffffff;
   line-height: rem(24px);
   background-color: #2f3234;
@@ -65,17 +58,20 @@
   width: 0;
 
   &-content {
-    padding: rem(20px);
+    padding: rem(60px) rem(30px);
+    width: 100%;
+    line-height: 1.8;
+    display: none;
   }
 
   &-active {
-    //  width: rem(621px);
+   //   width: rem(621px);
   }
 }
 
 .menu-acc__item-meat {
   background: url("../images/bg/photo-meat.jpg") center center / cover no-repeat;
-  
+  background-color: rgba(20, 20, 20, 0.7);
 }
 
 .menu-acc__item-vegan {
@@ -84,4 +80,8 @@
 
 .menu-acc__item-diet {
   background: url("../images/bg/photo-diet.jpg") center center / cover no-repeat;
+}
+
+.menu-acc__item-trigger__active h3 {
+  color: $yellow;
 }

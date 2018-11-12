@@ -1,5 +1,5 @@
 .best {
-  position: relative;
+  // position: relative;
   background: url("../images/bg/bg.jpg") center center / cover no-repeat;
 
   @include tablets {
@@ -9,12 +9,16 @@
 }
 
 .container--best {
-  position: absolute;
+  padding-top: 10%;
+  /*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .mnct {
@@ -35,14 +39,14 @@
     @include phones {
       flex-direction: initial;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: rem(20px);
     }
 
     &-desc {
       text-align: center;
 
       @include phones {
-        padding-left: 60px;
+        padding-left: rem(30px);
         text-align: left;
       }
     }
@@ -65,13 +69,10 @@
     opacity: 0.8;
     color: #2f3234;
     line-height: rem(24.02px);
-    //margin-bottom: rem(25px);
     text-align: justify;
     padding: 6%; //rem(18px);
 
     @include phones {
-      font-size: 14px;
-      line-height: 24.06px;
       padding: 6% 0;
     }
   }
@@ -80,8 +81,12 @@
     width: rem(97px);
     height: rem(89px);
     margin-bottom: 12%; //rem(33px);
+
+    @include phones {
+      width: 70%;
+      object-fit: cover;
+    }
   }
 
-  width: 90%;
- 
 }
+

@@ -13,6 +13,7 @@
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .form {
@@ -21,6 +22,7 @@
   color: #ffffff;
   background-color: transparent;
   margin-left: -5%;
+  text-align: left;
 
   @include tablets {
     flex-direction: column;
@@ -35,14 +37,26 @@
     margin-right: rem(20px);
 
     @include tablets {
-    width: 100%;
-    margin-left: 0;
+      width: 100%;
+      margin-left: 0;
     }
 
     &:last-child {
       margin-right: 0;
     }
+
+  /*  &-rigth {
+      @include phones {
+        align-items: center;
+        &:first-child {
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    }*/
   }
+
+
 
   &__row {
     display: flex;
@@ -81,47 +95,76 @@
   }
 
   &__radio {
-    display: inline-flex;
+    position: relative;
+    white-space: nowrap;
     margin-right: rem(20px);
+    display: flex;
+    align-items: center;
 
     &-real {
-      display: none;
+      position: absolute;
+      top: 0;
+      //  display: none;
     }
 
     &-visible {
-
+      width: rem(16px);
+      height: rem(16px);
+      border-radius: 50%;
+      background-color: #ffffff;
       position: relative;
-      padding-left: 20px;
+      margin-right: rem(8px);
 
       &:after {
         content: "";
         position: absolute;
-        display: inline-block;
-        width: rem(5px);
-        height: rem(5px);
+        display: block;
+        width: rem(0px);
+        height: rem(0px);
         border-radius: 50%;
-        vertical-align: middle;
-
-        &:focus {
-          border: rem(1px) solid $orange;
-          background-color: $orange;
-        }
-        
+        top: 50%;
+        left: 50%;
+        background-color: red;
+        transform: translate(-50%, -50%);
+        transition: all .3s;
       }
+    }
 
-      
+  }
+}
 
-      &:before {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        vertical-align: middle;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        border: 1px solid transparent;
-        background-color: #ffffff;
-        margin-left: -25px;
+.form__radio-real:checked {
+  &+.form__radio-visible {
+    &:after {
+      width: rem(6px);
+      height: rem(6px);
+    }
+  }
+}
+
+.form__checkbox {
+  .form__radio-visible {
+    border-radius: rem(0px);
+  }
+
+
+  .form__radio-real {
+    &+.form__radio-visible {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+
+
+
+  .form__radio-real:checked {
+    &+.form__radio-visible {
+      &:after {
+        background: url("../images/icons/check.png") 50% no-repeat;
+        background-size: contain;
+        width: rem(11px);
+        height: rem(9px);
       }
     }
   }
