@@ -144,7 +144,7 @@ footer { width: 100%; }
 
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.section { height: 100vh; min-height: 650px; }
+.section { height: 100vh; min-height: 550px; }
 
 .btn { padding: 0.5rem 0.78571rem; background-color: #e45028; border-radius: 0.35714rem; border: 0.07143rem solid transparent; color: #fff; font-size: 0.92857rem; font-weight: 500; text-transform: uppercase; text-decoration: none; }
 
@@ -236,7 +236,7 @@ footer { width: 100%; }
 
 @media (max-width: 768px) { .best { background: url("../images/bg/bg-768.jpg") center center/cover no-repeat; } }
 
-.container--best { padding-top: 10%; /*position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);*/ display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; align-content: center; text-align: center; }
+.container--best { padding-top: 10%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: center; align-content: center; text-align: center; }
 
 .mnct { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding-bottom: 7%; }
 
@@ -260,7 +260,9 @@ footer { width: 100%; }
 
 .mnct__item-img { width: 6.92857rem; height: 6.35714rem; margin-bottom: 12%; }
 
-@media (max-width: 480px) { .mnct__item-img { width: 70%; -o-object-fit: cover; object-fit: cover; } }
+@media (max-width: 480px) { .mnct__item-img { width: 90%; -o-object-fit: cover; object-fit: cover; } }
+
+.img--hand, .img--meat { width: 6.92857rem; height: 6.35714rem; }
 
 .reviews { background: #b5babd; }
 
@@ -400,7 +402,7 @@ footer { width: 100%; }
 
 .form__checkbox .form__radio-real:checked + .form__radio-visible:after { background: url("../images/icons/check.png") 50% no-repeat; background-size: contain; width: 0.78571rem; height: 0.64286rem; }
 
-.work { background: url("../../images/bg/BG_.jpg") center center/cover no-repeat; }
+.work { background: url("../images/bg/BG_.jpg") center center/cover no-repeat; }
 
 .contacts { position: relative; background: url("../images/bg/map.png") center center/cover no-repeat; }
 

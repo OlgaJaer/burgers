@@ -10,10 +10,6 @@
 
 .container--best {
   padding-top: 10%;
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,10 +79,13 @@
     margin-bottom: 12%; //rem(33px);
 
     @include phones {
-      width: 70%;
+      width: 90%;
       object-fit: cover;
     }
   }
 
 }
-
+.img--hand, .img--meat {
+  width: rem(97px);
+  height: rem(89px);
+}
