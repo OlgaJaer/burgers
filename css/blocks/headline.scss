@@ -2,7 +2,6 @@
   @include headline;
 
   &--hero {
-
     line-height: rem(30px);
     margin-top: 23%;
   }
@@ -12,15 +11,30 @@
     text-align: center;
 
     @include phones {
-      font-size: 50px;
+      font-size: rem(50px);
     }
   }
 
   &--team {
     margin-top: 0;
+
+    @include phones {
+      font-size: rem(50px);
+    }
   }
 
   &--menu {
     color: #fff;
+
+    @include phones {
+      font-size: rem(50px);
+    }
+  }
+
+  &--order {
+
+    @include phones {
+      font-size: rem(50px);
+    }
   }
 }

@@ -14,7 +14,7 @@
 
   @include phones {
     position: relative;
-    padding: rem(20px) rem(10px);
+    padding: rem(15px) rem(10px);
   }
 }
 
@@ -44,7 +44,6 @@
   @include tablets {
     flex-direction: column;
   }
-
 }
 
 .burgers__col-right {
@@ -70,7 +69,7 @@
     margin-bottom: rem(9px);
     width: rem(46px);
     height: rem(44px);
-    background: url("../../images/burger.png") center center no-repeat;
+    background: url("../images/burger.png") center center no-repeat;
   }
 
   &-icon {
