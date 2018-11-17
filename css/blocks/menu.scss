@@ -24,10 +24,9 @@
 .menu-acc__item-trigger {
   width: rem(80px);
   height: 100%;
-  background-color: rgba(20, 20, 20, 0.7);
   position: relative;
   float: left;
-  background-color: #cfd8dc;
+  padding: 0;
   border: transparent;
 
   & h3 {
@@ -45,6 +44,12 @@
     white-space: nowrap;
     margin-top: rem(-20px);
   }
+}
+
+.menu-acc__item-title {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.7);
 }
 
 .menu-acc__text {
@@ -65,7 +70,7 @@
   }
 
   &-active {
-   //   width: rem(621px);
+    //   width: rem(621px);
   }
 }
 

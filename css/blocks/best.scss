@@ -54,6 +54,7 @@
     font-size: rem(24px);
     line-height: rem(28.14px);
     letter-spacing: rem(-0.6px);
+    font-weight: bold;
 
     @include phones {
       font-size: rem(26px);

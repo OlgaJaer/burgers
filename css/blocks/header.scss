@@ -27,15 +27,20 @@
 }
 
 .logo {
-  width: rem(92px);
-  height: rem(69px);
+  width: rem(99px);
+  height: rem(75px);
+}
+
+.logo__pic {
+  width: rem(99px);
+  height: rem(75px);
 }
 
 .header__col-rigth {
   margin-right: rem(20px);
 }
 
-.hamburger-menu-link {
+.hamburger-menu__link {
   display: none;
   position: relative;
 

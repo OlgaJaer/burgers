@@ -1,3 +1,228 @@
 .burgers {
- background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  display: flex;
+  flex: 1;
+}
+
+.container--burgers {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: rem(1010px);
+  display: flex;
+  padding: rem(20px) 0;
+
+  @include phones {
+    position: relative;
+    padding: rem(20px) rem(10px);
+  }
+}
+
+.navigation--left {
+  position: relative;
+  width: 5%;
+  margin-right: 2%;
+  float: left;
+
+  @include phones {
+    position: absolute;
+    left: 0;
+  }
+
+  .arrow-scroll {
+    position: absolute;
+    transform: rotate(90deg);
+    width: rem(30px);
+  }
+}
+
+.burgers__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+}
+
+.burgers__col-right {
+  position: relative;
+  width: 100%;
+}
+
+.burgers__consist {
+  position: absolute;
+  width: rem(90px);
+  height: rem(90px);
+  background-color: $red;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: rem(5px);
+
+  &-img {
+    margin-bottom: rem(9px);
+    width: rem(46px);
+    height: rem(44px);
+    background: url("../../images/burger.png") center center no-repeat;
+  }
+
+  &-icon {
+    width: rem(46px);
+    height: rem(44px);
+  }
+
+
+  .burgers__consist-title {
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.burgers__kkal {
+  position: absolute;
+  width: rem(60px);
+  height: rem(75px);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: Gagalin;
+  font-size: rem(20px);
+  font-weight: 400;
+  opacity: 0.5;
+
+  @include tablets {
+    right: 0;
+    top: 0;
+    bottom: initial;
+    left: initial;
+    margin-bottom: rem(5px);
+  }
+
+
+  &-icon {
+    width: rem(60px);
+    height: rem(60px);
+    position: relative;
+    margin-bottom: rem(5px);
+
+    .kkal {
+
+      width: rem(60px);
+      height: rem(60px);
+    }
+  }
+
+  &-value {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-title {
+    font-size: rem(14px);
+  }
+}
+
+.burgers__img {
+  width: 100%;
+  padding-top: 13%;
+
+  @include phones {
+    padding-top: 25%;
+  }
+}
+
+.burgers__pic {
+  display: block;
+  max-width: rem(505px);
+  object-fit: cover;
+  margin: 0 auto;
+
+  @include phones {
+    max-width: rem(360px);
+  }
+}
+
+.burgers__col-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets {
+    text-align: center;
+  }
+
+
+  .headline {
+    color: #ffffff;
+
+    @include phones {
+      font-size: 50px;
+    }
+  }
+}
+
+.burgers__text {
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 23.97px;
+  margin-bottom: 10%;
+}
+
+.burgers__price {
+  display: flex;
+
+  &-title {
+    color: $red;
+    font-family: Gagalin;
+    font-weight: 400;
+    line-height: 28.08px;
+    font-size: rem(72px);
+    white-space: nowrap;
+    margin-right: rem(29px);
+
+    @include phones {
+      font-size: 50px;
+    }
+
+    span {
+      font-size: 30px;
+      letter-spacing: -0.75px;
+    }
+  }
+}
+
+.navigation--right {
+  position: relative;
+  width: 5%;
+  float: left;
+  margin-right: 2%;
+
+  @include phones {
+    position: absolute;
+    right: 0;
+  }
+
+  .arrow-scroll {
+    position: absolute;
+    width: rem(30px);
+    transform: rotate(-90deg);
+  }
 }

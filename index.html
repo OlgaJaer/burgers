@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
   <link rel="stylesheet" href="./css/main.css">
+
   <title>Burgers</title>
 </head>
 
@@ -17,7 +18,9 @@
           <header class="header">
             <div class="header__col">
               <div class="logo">
-                <img src="images/icons/logo.svg" alt="логотип Мистер Бургер" class="logo__pic">
+                <svg class="logo__pic">
+                  <use xlink:href="images/sprite.svg#logo"></use>
+                </svg>
               </div>
             </div>
             <div class="header__col header__col-center">
@@ -50,8 +53,8 @@
             <div class="header__col header__col-rigth">
               <a href="#" class="btn">заказать</a>
             </div>
-            <a href="#" class="hamburger-menu-link">
-              <div class="hamburger-menu-link__bars"></div>
+            <a href="#" class="hamburger-menu__link">
+              <div class="hamburger-menu__link-bars"></div>
             </a>
           </header>
 
@@ -120,13 +123,65 @@
               </div>
             </section>
           </div>
+          <div class="burgers__arrow">
 
+          </div>
         </div>
 
       </section>
 
       <section class="section burgers">
+        <div class="container--burgers">
+          <div class="navigation--left">
+            <svg class="arrow-scroll">
+              <use xlink:href="images/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </div>
+          <div class="burgers__content">
+            <div class="burgers__col-right">
+              <div class="burgers__consist">
+                <div class="burgers__consist-img">
+                  <!--  <img src="images/burger.png" class="burgers__consist-icon" alt="">-->
 
+                </div>
+                <div class="burgers__consist-title">Состав</div>
+              </div>
+              <div class="burgers__kkal">
+                <div class="burgers__kkal-icon">
+                  <svg class="kkal">
+                    <use xlink:href="images/sprite.svg#kkal"></use>
+                  </svg>
+                  <div class="burgers__kkal-value">1200</div>
+                </div>
+                <div class="burgers__kkal-title">ккал</div>
+              </div>
+              <div class="burgers__img">
+                <img src="images/content/black-burger.png" class="burgers__pic" alt="бургер с чернилами каракатицы">
+              </div>
+            </div>
+            <div class="burgers__col-left">
+              <h2 class="headline">Dark BEEF Burger</h2>
+              <div class="burgers__text">
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                  эмменталь,
+                  двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                </p>
+              </div>
+              <div class="burgers__price">
+                <div class="burgers__price-title">500<span> рублей</span></div>
+                <button class="btn">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="navigation--right">
+            <svg class="arrow-scroll">
+              <use xlink:href="images/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </div>
+
+
+        </div>
       </section>
 
       <section class="section team">
@@ -197,7 +252,9 @@
         <ul class="menu-acc">
           <li class="menu-acc__item">
             <button class="menu-acc__item-trigger menu-acc__item-trigger__active menu-acc__item-meat">
-              <h3>Для мясоедов</h3>
+              <div class="menu-acc__item-title">
+                <h3>Для мясоедов</h3>
+              </div>
             </button>
             <div class="menu-acc__text menu-acc__text-active">
               <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -213,7 +270,9 @@
           </li>
           <li class="menu-acc__item">
             <button class="menu-acc__item-trigger menu-acc__item-vegan">
-              <h3>Вегетарианское</h3>
+              <div class="menu-acc__item-title">
+                <h3>Вегетарианское</h3>
+              </div>
             </button>
             <div class="menu-acc__text">
               <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -229,7 +288,9 @@
           </li>
           <li class="menu-acc__item">
             <button class="menu-acc__item-trigger menu-acc__item-diet">
-              <h3>Диетическое</h3>
+              <div class="menu-acc__item-title">
+                <h3>Диетическое</h3>
+              </div>
             </button>
             <div class="menu-acc__text">
               <p class="menu-acc__text-content"> Речевой акт редуцирует диалектический характер. Развивая эту тему,
@@ -537,8 +598,45 @@
         </div>
       </a>
     </div>
-  </div>
 
+  </div>
+  <nav class="fixed-menu">
+
+    <div class="fixed-menu__logo">
+      <svg class="logo__pic">
+        <use xlink:href="images/sprite.svg#logo"></use>
+      </svg>
+    </div>
+    <button class="fixed-menu__close">
+      <svg class="fixed-menu__close-icon">
+        <use xlink:href="images/sprite.svg#cross"></use>
+      </svg>
+    </button>
+
+    <div class="fixed-menu__container">
+      <ul class="fixed-menu__list">
+        <li class="fixed-menu__item fixed-menu__item--disable">
+          <a href="#" class="fixed-menu__item-link">о нас</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#" class="fixed-menu__item-link">бургеры</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#" class="fixed-menu__item-link">команда</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#" class="fixed-menu__item-link">меню</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#" class="fixed-menu__item-link">отзывы</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#" class="fixed-menu__item-link">контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </body>
+<script src="js/common.js"></script>
 
 </html>
