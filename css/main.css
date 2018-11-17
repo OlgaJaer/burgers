@@ -166,11 +166,17 @@ footer { width: 100%; }
 
 .headline--best { color: #2f3234; text-align: center; }
 
-@media (max-width: 480px) { .headline--best { font-size: 50px; } }
+@media (max-width: 480px) { .headline--best { font-size: 3.57143rem; } }
 
 .headline--team { margin-top: 0; }
 
+@media (max-width: 480px) { .headline--team { font-size: 3.57143rem; } }
+
 .headline--menu { color: #fff; }
+
+@media (max-width: 480px) { .headline--menu { font-size: 3.57143rem; } }
+
+@media (max-width: 480px) { .headline--order { font-size: 3.57143rem; } }
 
 .hero { background: url("../images/bg/video-bg.jpg") center center/cover no-repeat; }
 
@@ -298,7 +304,7 @@ footer { width: 100%; }
 
 .container--burgers { margin: 0 auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 72.14286rem; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 1.42857rem 0; }
 
-@media (max-width: 480px) { .container--burgers { position: relative; padding: 1.42857rem 0.71429rem; } }
+@media (max-width: 480px) { .container--burgers { position: relative; padding: 1.07143rem 0.71429rem; } }
 
 .navigation--left { position: relative; width: 5%; margin-right: 2%; float: left; }
 
@@ -314,7 +320,7 @@ footer { width: 100%; }
 
 .burgers__consist { position: absolute; width: 6.42857rem; height: 6.42857rem; background-color: #e35028; opacity: 0.4; top: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-radius: 0.35714rem; }
 
-.burgers__consist-img { margin-bottom: 0.64286rem; width: 3.28571rem; height: 3.14286rem; background: url("../../images/burger.png") center center no-repeat; }
+.burgers__consist-img { margin-bottom: 0.64286rem; width: 3.28571rem; height: 3.14286rem; background: url("../images/burger.png") center center no-repeat; }
 
 .burgers__consist-icon { width: 3.28571rem; height: 3.14286rem; }
 
@@ -420,7 +426,9 @@ footer { width: 100%; }
 
 .menu-acc__text { height: 100%; color: #ffffff; line-height: 1.71429rem; background-color: #2f3234; opacity: 0.93; float: left; overflow: hidden; width: 0; }
 
-.menu-acc__text-content { padding: 4.28571rem 2.14286rem; width: 100%; line-height: 1.8; display: none; }
+.menu-acc__text-content { padding: 4.28571rem 2.14286rem; width: 100%; line-height: 1.8; }
+
+.menu-acc__text-active { width: 44.35714rem; }
 
 .menu-acc__item-meat { background: url("../images/bg/photo-meat.jpg") center center/cover no-repeat; background-color: rgba(20, 20, 20, 0.7); }
 

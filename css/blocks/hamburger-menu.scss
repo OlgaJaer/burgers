@@ -37,10 +37,11 @@
   border-color: transparent;
   box-sizing: content-box;
 
-  &:hover {
-    use {fill: &red;
-    }
-  }
+  //&:hover {
+   // use {
+  //    fill: &red;
+  //  }
+  //}
 
   &-icon {
     width: rem(18px);
