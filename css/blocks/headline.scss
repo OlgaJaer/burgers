@@ -20,6 +20,7 @@
 
     @include phones {
       font-size: rem(50px);
+      margin-bottom: 3%;
     }
   }
 
@@ -35,6 +36,15 @@
 
     @include phones {
       font-size: rem(50px);
+    }
+  }
+
+  &--burgers {
+    color: #ffffff;
+
+    @include phones {
+      font-size: rem(50px);
+      margin-bottom: 5%;
     }
   }
 }

@@ -46,9 +46,12 @@
   }
 }
 
-.burgers__col-right {
+.burgers__col-left {
   position: relative;
   width: 100%;
+  color: #ffffff;
+  font-family: 'Gagalin', Impact, sans-serif;
+  font-weight: 400;
 }
 
 .burgers__consist {
@@ -79,10 +82,7 @@
 
 
   .burgers__consist-title {
-    color: #ffffff;
-    font-family: Gagalin;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: rem(14px);
   }
 }
 
@@ -97,10 +97,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff;
-  font-family: Gagalin;
   font-size: rem(20px);
-  font-weight: 400;
   opacity: 0.5;
 
   @include tablets {
@@ -110,7 +107,6 @@
     left: initial;
     margin-bottom: rem(5px);
   }
-
 
   &-icon {
     width: rem(60px);
@@ -142,7 +138,7 @@
   padding-top: 13%;
 
   @include phones {
-    padding-top: 25%;
+    padding-top: 20%;
   }
 }
 
@@ -157,7 +153,7 @@
   }
 }
 
-.burgers__col-left {
+.burgers__col-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,24 +161,16 @@
   @include tablets {
     text-align: center;
   }
-
-
-  .headline {
-    color: #ffffff;
-
-    @include phones {
-      font-size: 50px;
-    }
-  }
 }
 
 .burgers__text {
   color: #ffffff;
-  font-family: Ubuntu;
-  font-size: 14px;
-  font-weight: 300;
   line-height: 23.97px;
   margin-bottom: 10%;
+
+  @include phones {
+    margin-bottom: 5%;
+  }
 }
 
 .burgers__price {
@@ -190,7 +178,7 @@
 
   &-title {
     color: $red;
-    font-family: Gagalin;
+    font-family: 'Gagalin', Impact, sans-serif;
     font-weight: 400;
     line-height: 28.08px;
     font-size: rem(72px);
