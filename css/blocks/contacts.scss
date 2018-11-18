@@ -51,7 +51,7 @@
       width: 12px;
       height: 12px;
       margin-right: 5px;
-    } 
+    }
   }
 }
 
@@ -62,31 +62,40 @@
     width: 23px;
     height: 23px;
     margin-left: 19px;
+
+    &:first-child {
+
+      @include phones {
+        margin-left: 0;
+      }
+    }
   }
 }
 
 .social__link {
+  width: 23px;
+  height: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .icon-vk {
-  width: 23px;
+  max-width: 23px;
   height: 13px;
 }
 
 .icon-fb {
-  width: 20px;
+  max-width: 20px;
   height: 20px;
 }
 
 .icon-inst {
-  width: 20px;
+  max-width: 20px;
   height: 20px;
 }
 
 .icon-twitter {
-  width: 20px;
+  max-width: 20px;
   height: 16px;
 }

@@ -9,11 +9,15 @@
   align-items: center;
   justify-content: center;
   display: none;
-  transition: opacity .3s;
+  transition: opacity 1s ease;
 }
 
 .fixed-menu__open {
   display: flex;
+  overflow: hidden;
+}
+
+.scroll-hidden {
   overflow: hidden;
 }
 

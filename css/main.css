@@ -524,15 +524,17 @@ footer { width: 100%; }
 
 .social__item { width: 23px; height: 23px; margin-left: 19px; }
 
-.social__link { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+@media (max-width: 480px) { .social__item:first-child { margin-left: 0; } }
 
-.icon-vk { width: 23px; height: 13px; }
+.social__link { width: 23px; height: 23px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.icon-fb { width: 20px; height: 20px; }
+.icon-vk { max-width: 23px; height: 13px; }
 
-.icon-inst { width: 20px; height: 20px; }
+.icon-fb { max-width: 20px; height: 20px; }
 
-.icon-twitter { width: 20px; height: 16px; }
+.icon-inst { max-width: 20px; height: 20px; }
+
+.icon-twitter { max-width: 20px; height: 16px; }
 
 .pagination { position: fixed; top: 11%; right: 6%; }
 
@@ -550,9 +552,11 @@ footer { width: 100%; }
 
 .arrow-scroll { width: 30px; height: 15px; }
 
-.fixed-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #2f3234; opacity: 0.99; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; display: none; -webkit-transition: opacity .3s; -o-transition: opacity .3s; transition: opacity .3s; }
+.fixed-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #2f3234; opacity: 0.99; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; display: none; -webkit-transition: opacity 1s ease; -o-transition: opacity 1s ease; transition: opacity 1s ease; }
 
 .fixed-menu__open { display: -webkit-box; display: -ms-flexbox; display: flex; overflow: hidden; }
+
+.scroll-hidden { overflow: hidden; }
 
 .fixed-menu__logo { position: absolute; top: 10px; left: 30px; width: 99px; height: 75px; }
 
