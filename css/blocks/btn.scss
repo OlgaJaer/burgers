@@ -1,8 +1,8 @@
 .btn {
-  padding: rem(7px) rem(11px);
+  padding: 7px 11px;
   background-color: $orange;
-  border-radius: rem(5px);
-  border: rem(1px) solid transparent;
+  border-radius: 5px;
+  border: 1px solid transparent;
   color: #fff;
   font-size: rem(13px);
   font-weight: 500;
@@ -22,7 +22,7 @@
     }
 
     @include phones {
-      font-size: 13px;
+      font-size: rem(13px);
     }
   }
 

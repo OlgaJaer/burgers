@@ -4,7 +4,6 @@
 
   @include tablets {
     background: url("../images/bg/bg-768.jpg") center center / cover no-repeat;
-
   }
 }
 
@@ -20,8 +19,7 @@
 .mnct {
   display: flex;
   justify-content: center;
-  padding-bottom: 7%; // rem(20px)
-
+  padding-bottom: 7%; 
   @include phones {
     flex-direction: column;
   }
@@ -35,14 +33,14 @@
     @include phones {
       flex-direction: initial;
       width: 100%;
-      margin-bottom: rem(20px);
+      margin-bottom: 20px;
     }
 
     &-desc {
       text-align: center;
 
       @include phones {
-        padding-left: rem(30px);
+        padding-left: 30px;
         text-align: left;
       }
     }
@@ -67,7 +65,7 @@
     color: #2f3234;
     line-height: rem(24.02px);
     text-align: justify;
-    padding: 6%; //rem(18px);
+    padding: 6%; 
 
     @include phones {
       padding: 6% 0;
@@ -77,15 +75,15 @@
   &__item-img {
     width: rem(97px);
     height: rem(89px);
-    margin-bottom: 12%; //rem(33px);
+    margin-bottom: 12%; 
 
     @include phones {
       width: 90%;
       object-fit: cover;
     }
   }
-
 }
+
 .img--hand, .img--meat, .img--natural {
   width: rem(97px);
   height: rem(89px);

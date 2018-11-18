@@ -15,24 +15,23 @@
 .fixed-menu__open {
   display: flex;
   overflow: hidden;
-
 }
 
 .fixed-menu__logo {
   position: absolute;
-  top: rem(10px);
-  left: rem(30px);
-  width: rem(99px);
-  height: rem(75px);
+  top: 10px;
+  left: 30px;
+  width: 99px;
+  height: 75px;
 }
 
 .fixed-menu__close {
   position: absolute;
-  right: rem(15px);
-  top: rem(15px);
-  width: rem(18px);
-  height: rem(18px);
-  padding: rem(15px);
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  padding: 15px;
   background-color: transparent;
   border-color: transparent;
   box-sizing: content-box;
@@ -44,8 +43,8 @@
   //}
 
   &-icon {
-    width: rem(18px);
-    height: rem(18px);
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -65,33 +64,31 @@
 }
 
 .fixed-menu__item {
-  padding: rem(15px);
+  padding: 15px;
   position: relative;
 
   &-link {
     text-decoration: none;
     color: #ffffff;
-
   }
 
   &-link:hover {
-    border-bottom: rem(1px) solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     transition: all .3s;
   }
 
   &:before {
     content: '';
     display: inline-block;
-    margin-bottom: rem(2px);
-    margin-right: rem(15px);
-    width: rem(6px);
-    height: rem(6px);
+    margin-bottom: 2px;
+    margin-right: 15px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #fff;
     position: absolute;
     top: 0;
     left: 50%;
-
   }
 
   &--disable:before {

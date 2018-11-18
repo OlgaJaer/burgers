@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   text-align: start;
-  padding: rem(10px) rem(80px);
+  padding: 10px 80px;
 
   @include phones {
     flex-direction: column;
@@ -27,7 +27,7 @@
   text-align: right;
 
   @include phones {
-    margin-top: rem(10px);
+    margin-top: 10px;
   }
 }
 
@@ -50,8 +50,8 @@
       background: url("../images/icons/phone.svg") center center no-repeat;
       width: 12px;
       height: 12px;
-      margin-right: rem(5px);
-    }
+      margin-right: 5px;
+    } 
   }
 }
 
@@ -59,11 +59,10 @@
   display: flex;
 
   &__item {
-    width: rem(23px);
-    height: rem(23px);
-    margin-left: rem(19px);
+    width: 23px;
+    height: 23px;
+    margin-left: 19px;
   }
-
 }
 
 .social__link {
@@ -73,21 +72,21 @@
 }
 
 .icon-vk {
-  width: rem(23px);
-  height: rem(13px);
+  width: 23px;
+  height: 13px;
 }
 
 .icon-fb {
-  width: rem(20px);
-  height: rem(20px);
+  width: 20px;
+  height: 20px;
 }
 
 .icon-inst {
-  width: rem(20px);
-  height: rem(20px);
+  width: 20px;
+  height: 20px;
 }
 
 .icon-twitter {
-  width: rem(20px);
-  height: rem(16px);
+  width: 20px;
+  height: 16px;
 }

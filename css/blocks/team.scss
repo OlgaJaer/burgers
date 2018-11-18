@@ -24,14 +24,14 @@
 .team__content {
   display: flex;
   flex-direction: column;
-  margin: rem(98px) rem(113px);
+  margin: 98px 113px;
 
   @include tablets {
     text-align: center;
   }
 
   @include phones {
-    margin: rem(90px) rem(65px);
+    margin: 90px 65px;
   }
 }
 
@@ -41,11 +41,11 @@
     @include tablets {
       display: flex;
       flex-direction: column;
-      margin-bottom: rem(30px);
+      margin-bottom: 30px;
     }
 
     @include phones {
-      margin-bottom: rem(20px);
+      margin-bottom: 20px;
     }
   }
 
@@ -69,11 +69,11 @@
       content: "";
       width: 0;
       height: 0;
-      border: rem(7px) solid transparent;
+      border: 7px solid transparent;
       border-top-color: $yellow;
       border-bottom-width: 0;
       transition: all .5s;
-      margin-right: rem(10px);
+      margin-right: 10px;
     }
   }
 
@@ -81,7 +81,7 @@
     height: 0;
     overflow: hidden;
     display: flex;
-    padding-top: rem(17px);
+    padding-top: 17px;
 
     @include tablets {
       flex-direction: column;
@@ -89,32 +89,31 @@
     }
 
     @include phones {
-      padding-top: rem(10px);
+      padding-top: 10px;
     }
   }
 
   &__pic {
-    width: rem(100px);
-    height: rem(100px);
-    margin-right: rem(21px);
-    margin-bottom: rem(40px);
+    width: 100px;
+    height: 100px;
+    margin-right: 21px;
+    margin-bottom: 40px;
 
     @include tablets {
       margin-right: 0;
     }
 
     @include phones {
-      margin-bottom: rem(20px);
+      margin-bottom: 20px;
     }
   }
 
   &__pic-img {
-    max-width: rem(100px);
-    height: rem(100px);
+    max-width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
-
   }
 
   &__text {
@@ -147,6 +146,5 @@
 
   .team-acc__desc {
     height: auto;
-
   }
 }

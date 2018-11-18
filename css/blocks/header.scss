@@ -32,12 +32,12 @@
 }
 
 .logo__pic {
-  width: rem(99px);
-  height: rem(75px);
+  width: 99px;
+  height: 75px;
 }
 
 .header__col-rigth {
-  margin-right: rem(20px);
+  margin-right: 20px;
 }
 
 .hamburger-menu__link {
@@ -52,13 +52,12 @@
   &:before,
   &:after {
     content: "";
-    width: rem(24px);
-    height: rem(4px);
+    width: 24px;
+    height: 4px;
     background: #ffffff;
-    border-radius: rem(3px);
-    margin-bottom: rem(10px);
-    margin-top: rem(10px);
-
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   &:before,
@@ -68,11 +67,11 @@
 
   &:after {
     top: 100%;
-    margin-top: rem(4px);
+    margin-top: 4px;
   }
 
   &:before {
     bottom: 100%;
-    margin-bottom: rem(4px);
+    margin-bottom: 4px;
   }
 }

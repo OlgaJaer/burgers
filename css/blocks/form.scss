@@ -34,7 +34,12 @@
     margin-left: 3%;
     display: flex;
     flex-direction: column;
-   // margin-right: rem(20px);
+
+    &-right {
+      justify-content: start;
+    }
+
+    // margin-right: rem(20px);
 
     @include tablets {
       width: 100%;
@@ -50,8 +55,10 @@
     display: flex;
     margin-bottom: rem(19px);
     flex: 1;
-    justify-content: center;
-    
+
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &__block {
@@ -68,8 +75,10 @@
 
     &-buttons {
       display: flex;
-      justify-content: center;
 
+      @include tablets {
+        justify-content: center;
+      }
     }
   }
 

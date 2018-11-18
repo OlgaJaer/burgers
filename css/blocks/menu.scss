@@ -22,7 +22,7 @@
 }
 
 .menu-acc__item-trigger {
-  width: rem(80px);
+  width: 80px;
   height: 100%;
   position: relative;
   float: left;
@@ -42,7 +42,7 @@
     top: 100%;
     left: 50%;
     white-space: nowrap;
-    margin-top: rem(-20px);
+    margin-top: -20px;
   }
 }
 
@@ -63,14 +63,14 @@
   width: 0;
 
   &-content {
-    padding: rem(60px) rem(30px);
+    padding: 60px 30px;
     width: 100%;
     line-height: 1.8;
    // display: none;
   }
 
   &-active {
-     width: rem(621px);
+     width: 621px;
   }
 }
 

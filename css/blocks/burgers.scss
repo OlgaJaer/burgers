@@ -8,13 +8,13 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  width: rem(1010px);
+  width: 1010px;
   display: flex;
-  padding: rem(20px) 0;
+  padding: 20px 0;
 
   @include phones {
     position: relative;
-    padding: rem(15px) rem(10px);
+    padding: 15px 10px;
   }
 }
 
@@ -58,18 +58,17 @@
   position: absolute;
   width: rem(90px);
   height: rem(90px);
-  background-color: $red;
-  opacity: 0.4;
+  background-color: rgba(227, 80, 40, 0.4);
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: rem(5px);
+  border-radius: 5px;
 
   &-img {
-    margin-bottom: rem(9px);
+    margin-bottom: 9px;
     width: rem(46px);
     height: rem(44px);
     background: url("../images/burger.png") center center no-repeat;
@@ -79,7 +78,6 @@
     width: rem(46px);
     height: rem(44px);
   }
-
 
   .burgers__consist-title {
     font-size: rem(14px);
@@ -105,14 +103,14 @@
     top: 0;
     bottom: initial;
     left: initial;
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
   }
 
   &-icon {
     width: rem(60px);
     height: rem(60px);
     position: relative;
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
 
     .kkal {
 
@@ -144,12 +142,12 @@
 
 .burgers__pic {
   display: block;
-  max-width: rem(505px);
+  max-width: 505px;
   object-fit: cover;
   margin: 0 auto;
 
   @include phones {
-    max-width: rem(360px);
+    max-width: 360px;
   }
 }
 
@@ -165,7 +163,7 @@
 
 .burgers__text {
   color: #ffffff;
-  line-height: 23.97px;
+  line-height: rem(23.97px);
   margin-bottom: 10%;
 
   @include phones {
@@ -180,18 +178,18 @@
     color: $red;
     font-family: 'Gagalin', Impact, sans-serif;
     font-weight: 400;
-    line-height: 28.08px;
+    line-height: rem(28.08px);
     font-size: rem(72px);
     white-space: nowrap;
     margin-right: rem(29px);
 
     @include phones {
-      font-size: 50px;
+      font-size: rem(50px);
     }
 
     span {
-      font-size: 30px;
-      letter-spacing: -0.75px;
+      font-size: rem(30px);
+      letter-spacing: rem(-0.75px);
     }
   }
 }
@@ -209,7 +207,7 @@
 
   .arrow-scroll {
     position: absolute;
-    width: rem(30px);
+    width: 30px;
     transform: rotate(-90deg);
   }
 }
