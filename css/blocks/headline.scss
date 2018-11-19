@@ -41,6 +41,7 @@
 
   &--burgers {
     color: #ffffff;
+    margin-bottom: 40px;
 
     @include phones {
       font-size: rem(50px);

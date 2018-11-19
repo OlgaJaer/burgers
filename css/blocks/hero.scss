@@ -26,14 +26,19 @@
 }
 
 .hero__content__pic {
- width: 100%;
-display: flex;
-justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   &-img {
     display: block;
-    width: 417px;
-    height: 424px;
+    max-width: 417px;
+    object-fit: cover;
+    //height: 424px;
+
+    @include phones {
+      max-width: 320px;
+    }
   }
 }
 
