@@ -5,11 +5,11 @@
   right: 0;
   bottom: 0;
   background-color: #2f3234;
-  opacity: 0.99;
   align-items: center;
   justify-content: center;
   display: none;
-  transition: opacity 1s ease;
+  animation: appear 1s;
+  -webkit-animation: appear 1s;
 }
 
 .fixed-menu__open {
@@ -97,5 +97,25 @@
 
   &--disable:before {
     content: none;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.99;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.99;
   }
 }

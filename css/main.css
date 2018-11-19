@@ -552,7 +552,7 @@ footer { width: 100%; }
 
 .arrow-scroll { width: 30px; height: 15px; }
 
-.fixed-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #2f3234; opacity: 0.99; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; display: none; -webkit-transition: opacity 1s ease; -o-transition: opacity 1s ease; transition: opacity 1s ease; }
+.fixed-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #2f3234; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; display: none; animation: appear 1s; -webkit-animation: appear 1s; }
 
 .fixed-menu__open { display: -webkit-box; display: -ms-flexbox; display: flex; overflow: hidden; }
 
@@ -577,5 +577,11 @@ footer { width: 100%; }
 .fixed-menu__item:before { content: ''; display: inline-block; margin-bottom: 2px; margin-right: 15px; width: 6px; height: 6px; border-radius: 50%; background: #fff; position: absolute; top: 0; left: 50%; }
 
 .fixed-menu__item--disable:before { content: none; }
+
+@keyframes appear { from { opacity: 0; }
+  to { opacity: 0.99; } }
+
+@-webkit-keyframes appear { from { opacity: 0; }
+  to { opacity: 0.99; } }
 
 /*# sourceMappingURL=main.css.map */
