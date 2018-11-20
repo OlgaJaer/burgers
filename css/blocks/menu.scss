@@ -63,14 +63,27 @@
   width: 0;
 
   &-content {
-    padding: 60px 30px;
-    width: 100%;
+    padding: 10% 5%;
     line-height: 1.8;
-   // display: none;
+    // display: none;
+  }
+}
+
+.active {
+  h3 {
+    color: $yellow;
   }
 
-  &-active {
-     width: 621px;
+  .menu-acc__text {
+    width: 641px;
+
+   @include tablets {
+     width: calc(100vw - 240px); 
+    }
+
+    @include phones {
+     width:  340px;
+    }
   }
 }
 
@@ -85,8 +98,4 @@
 
 .menu-acc__item-diet {
   background: url("../images/bg/photo-diet.jpg") center center / cover no-repeat;
-}
-
-.menu-acc__item-trigger__active h3 {
-  color: $yellow;
 }

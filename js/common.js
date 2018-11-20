@@ -1,23 +1,41 @@
-const hamburger = document.querySelector(".hamburger-menu__link");
-const fixedMenu = document.querySelector(".fixed-menu");
-const closeMenu = document.querySelector(".fixed-menu__close");
+const $hamburger = $(".hamburger-menu__link");
+const $fixedMenu = $(".fixed-menu");
+const $closeMenu = $(".fixed-menu__close");
 
-hamburger.addEventListener('click', function (e) {
+$hamburger.on('click', function (e) {
   e.preventDefault();
-  fixedMenu.classList.add('fixed-menu__open');
-  document.body.classList.add('scroll-hidden');
+  $fixedMenu.fadeIn().addClass('fixed-menu__open');
+  $('body').addClass('scroll-hidden');
 });
 
 
-fixedMenu.addEventListener('click', function () {
-  fixedMenu.classList.remove('fixed-menu__open');
-  document.body.classList.remove('scroll-hidden');
-});
-
-const triggerMenu = document.querySelector(".menu-acc__item-trigger");
-const textMenu = document.querySelector(".menu-acc__text");
-
-triggerMenu.addEventListener('click', function (e) {
+$fixedMenu.on('click', function (e) {
   e.preventDefault();
-  textMenu.classList.add("menu-acc__text-active");
+  $fixedMenu.fadeOut().removeClass('fixed-menu__open');
+  $('body').removeClass('scroll-hidden');
 });
+
+function accordeon(btn) {
+  $(btn).on('click', function () {
+    let thisBtn = this;
+
+    $(btn).each(function (index, element) {
+      let accoItem = $(this).parent();
+
+      if (thisBtn == element) {
+        if (accoItem.hasClass('active')) {
+          accoItem.removeClass('active');
+        } else {
+          accoItem.addClass('active');
+        }
+      } else {
+        if (accoItem.hasClass('active')) {
+          accoItem.removeClass('active');
+        }
+      }
+    })
+  });
+}
+
+accordeon('.team-acc__item-trigger');
+accordeon('.menu-acc__item-trigger');
