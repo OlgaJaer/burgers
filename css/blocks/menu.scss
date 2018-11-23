@@ -61,6 +61,7 @@
   float: left;
   overflow: hidden;
   width: 0;
+  transition: width .5s ease;
 
   &-content {
     padding: 10% 5%;
@@ -75,15 +76,15 @@
   }
 
   .menu-acc__text {
-    width: 641px;
+    width: 528px;
 
    @include tablets {
-     width: calc(100vw - 240px); 
+     width: calc(100vw - 270px); 
     }
 
-    @include phones {
-     width:  340px;
-    }
+  //  @include phones {
+   //  width:  340px;
+  //  }
   }
 }
 

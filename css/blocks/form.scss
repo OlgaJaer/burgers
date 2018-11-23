@@ -135,8 +135,11 @@
         transition: all .3s;
       }
     }
-
   }
+}
+
+.error {
+  color: $red;
 }
 
 .form__radio-real:checked {

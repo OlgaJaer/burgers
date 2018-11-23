@@ -35,4 +35,10 @@
 .form__button-clean {
   border-color: transparent;
   background: transparent;
+
+  &:hover {
+    color: $red;
+    border-color: transparent;
+    background: transparent;
+  }
 }
