@@ -45,19 +45,18 @@ accordeon('.menu-acc__item-trigger');
 //слайдер
 
 var slideNow = 1;
-var slideCount = $('.slider').children().length;
+var slideCount = $('.viewport').children().length;
 var translateWidth = 0;
-var viewport = $('.container--burger').width(); //* 90%;
+const $viewport = $('.viewport'); //* 90%;
 const $right = $('.navigation--right');
 const $left = $('.navigation--left');
-const $slider = $('.slider')
+const $slider = $('.slider');
 
-console.log(viewport);
+console.log('viewport');
 
 $right.on('click', function () {
-  debugger;
   nextSlide();
-
+console.log('slideCount');
 });
 
 $left.on('click', function () {
@@ -66,11 +65,11 @@ $left.on('click', function () {
 
 function nextSlide() {
   if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-    $slider.css('transform', 'translate(0, 0)');
+    $viewport.css('transform', 'translate(0, 0)');
     slideNow = 1;
   } else {
     translateWidth = -$('.viewport').width() * (slideNow);
-    $slider.css(
+    $viewport.css(
       'transform', 'translate(' + translateWidth + 'px, 0)');
     slideNow++;
   }
@@ -80,12 +79,12 @@ function prevSlide() {
   if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
     translateWidth = -$('.viewport').width() * (slideCount - 1);
 
-    $slider.css(
+    $viewport.css(
       'transform', 'translate(' + translateWidth + 'px, 0)', );
     slideNow = slideCount;
   } else {
-    translateWidth = -$('.viewport').width() * (slideNow - 1);
-    $slider.css(
+    translateWidth = -$('.viewport').width() * (slideNow - 2);
+    $viewport.css(
       'transform', 'translate(' + translateWidth + 'px, 0)', );
     slideNow--;
   }
@@ -113,8 +112,8 @@ send.addEventListener('click', e => {
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
-      if (xhr.response.status) {
-        console.log('ok!');
+      if (xhr.status == 200) {
+        console.log('ok');
       }
     });
   }
@@ -154,11 +153,11 @@ phone.addEventListener('keydown', function(e) {
     isDash = true;
   }
 
-  if (e.key == "ArrowLeft" || e.key == "ArrowRight" || e.key == 'Backspace') {
+  if (e.key == 'ArrowLeft' || e.key == 'ArrowRight' || e.key == 'Backspace') {
     isControl == true;
   }
   if (!isDigit && !isDash && !isControl) {
     e.preventDefault();
   }
-  console.log(e.key);
+ // console.log(e.key);
 });

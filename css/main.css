@@ -194,7 +194,7 @@ footer { width: 100%; }
 
 .hero__content__pic { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.hero__content__pic-img { display: block; max-width: 426px; -o-object-fit: cover; object-fit: cover; }
+.hero__content__pic-img { display: block; max-width: 451px; -o-object-fit: cover; object-fit: cover; margin: 0 auto; }
 
 @media (max-width: 480px) { .hero__content__pic-img { max-width: 320px; } }
 
@@ -310,7 +310,7 @@ footer { width: 100%; }
 
 .burgers { background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b), to(#f9b43b)); background-image: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); background-image: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
-.container--burgers { margin: 0 auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 1010px; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 20px 0; }
+.container--burgers { margin: 0 auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; max-width: 1010px; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 20px 0; }
 
 @media (max-width: 480px) { .container--burgers { position: relative; padding: 15px 10px; } }
 
@@ -320,11 +320,13 @@ footer { width: 100%; }
 
 @media (max-width: 480px) { .navigation--left { position: absolute; left: 0; } }
 
-.navigation--left .arrow-scroll { position: absolute; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 2.14286rem; }
+.navigation--left .arrow-scroll { position: absolute; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 30px; }
 
-.slider { width: 90%; display: -webkit-box; display: -ms-flexbox; display: flex; overflow: hidden; height: 100%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+.slider { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; overflow: hidden; height: 100%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
-.burgers__content { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.viewport { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -webkit-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+
+.burgers__content { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-width: 100%; }
 
 @media (max-width: 768px) { .burgers__content { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 
@@ -332,19 +334,19 @@ footer { width: 100%; }
 
 .burgers__consist { position: absolute; width: 6.42857rem; height: 6.42857rem; background-color: rgba(227, 80, 40, 0.4); top: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-radius: 5px; }
 
-.burgers__consist-img { margin-bottom: 9px; width: 3.28571rem; height: 3.14286rem; background: url("../images/burger.png") center center no-repeat; }
+.burgers__consist-img { margin-bottom: 9px; width: 46px; height: 44px; background: url("../images/burger.png") center center no-repeat; }
 
-.burgers__consist-icon { width: 3.28571rem; height: 3.14286rem; }
+.burgers__consist-icon { width: 46px; height: 44px; }
 
 .burgers__consist .burgers__consist-title { font-size: 1rem; }
 
-.burgers__kkal { position: absolute; width: 4.28571rem; height: 5.35714rem; bottom: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; font-size: 1.42857rem; opacity: 0.5; }
+.burgers__kkal { position: absolute; width: 60px; height: 75px; bottom: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; font-size: 1.42857rem; opacity: 0.5; }
 
 @media (max-width: 768px) { .burgers__kkal { right: 0; top: 0; bottom: initial; left: initial; margin-bottom: 5px; } }
 
-.burgers__kkal-icon { width: 4.28571rem; height: 4.28571rem; position: relative; margin-bottom: 5px; }
+.burgers__kkal-icon { width: 60px; height: 60px; position: relative; margin-bottom: 5px; }
 
-.burgers__kkal-icon .kkal { width: 4.28571rem; height: 4.28571rem; }
+.burgers__kkal-icon .kkal { width: 60px; height: 60px; }
 
 .burgers__kkal-value { position: absolute; top: 60%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
@@ -355,6 +357,8 @@ footer { width: 100%; }
 @media (max-width: 480px) { .burgers__img { padding-top: 20%; padding-bottom: 7%; } }
 
 .burgers__pic { display: block; max-width: 505px; -o-object-fit: cover; object-fit: cover; margin: 0 auto; -webkit-transition: max-width .5s linear; -o-transition: max-width .5s linear; transition: max-width .5s linear; }
+
+@media (max-width: 768px) { .burgers__pic { max-width: 405px; } }
 
 @media (max-width: 480px) { .burgers__pic { max-width: 305px; } }
 

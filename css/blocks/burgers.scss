@@ -8,7 +8,8 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  width: 1010px;
+  max-width: 1010px;
+  width: 100%;
   display: flex;
   padding: 20px 0;
   @include phones {
@@ -32,22 +33,29 @@
   .arrow-scroll {
     position: absolute;
     transform: rotate(90deg);
-    width: rem(30px);
+    width: 30px;
   }
 }
 
 .slider {
-  width: 90%;
+  width: 100%;
   display: flex;
   overflow: hidden;
   height: 100%;
   flex: 1;
 }
 
+.viewport {
+  display: flex;
+  width: 100%;
+  transition: all 1s;
+}
+
 .burgers__content {
   width: 100%;
   display: flex;
   align-items: center;
+  min-width: 100%;
   @include tablets {
     flex-direction: column;
   }
@@ -75,13 +83,13 @@
   border-radius: 5px;
   &-img {
     margin-bottom: 9px;
-    width: rem(46px);
-    height: rem(44px);
+    width: 46px;
+    height: 44px;
     background: url("../images/burger.png") center center no-repeat;
   }
   &-icon {
-    width: rem(46px);
-    height: rem(44px);
+    width: 46px;
+    height: 44px;
   }
   .burgers__consist-title {
     font-size: rem(14px);
@@ -90,8 +98,8 @@
 
 .burgers__kkal {
   position: absolute;
-  width: rem(60px);
-  height: rem(75px);
+  width: 60px;
+  height: 75px;
   bottom: 0;
   left: 0;
   display: flex;
@@ -109,13 +117,13 @@
     margin-bottom: 5px;
   }
   &-icon {
-    width: rem(60px);
-    height: rem(60px);
+    width: 60px;
+    height: 60px;
     position: relative;
     margin-bottom: 5px;
     .kkal {
-      width: rem(60px);
-      height: rem(60px);
+      width: 60px;
+      height: 60px;
     }
   }
   &-value {
@@ -145,6 +153,9 @@
   object-fit: cover;
   margin: 0 auto;
   transition: max-width .5s linear;
+  @include tablets {
+    max-width: 405px;
+  }
   @include phones {
     max-width: 305px;
   }

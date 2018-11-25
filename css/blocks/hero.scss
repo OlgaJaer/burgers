@@ -32,8 +32,9 @@
 
   &-img {
     display: block;
-    max-width: 426px;
+    max-width: 451px;
     object-fit: cover;
+    margin: 0 auto;
     //height: 424px;
 
     @include phones {
