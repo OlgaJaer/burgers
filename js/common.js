@@ -56,7 +56,7 @@ console.log('viewport');
 
 $right.on('click', function () {
   nextSlide();
-console.log('slideCount');
+  console.log('slideCount');
 });
 
 $left.on('click', function () {
@@ -108,14 +108,49 @@ send.addEventListener('click', e => {
     };
 
     const xhr = new XMLHttpRequest();
+    var formOverlay;
+
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
       if (xhr.status == 200) {
-        console.log('ok');
+        formOverlay = createOverlay("Сообщение отправлено");
+        document.body.appendChild(formOverlay);
+        document.body.classList.add("scroll-hidden");
+      } else {
+        formOverlay = createOverlay("Что-то не так");
+        document.body.appendChild(formOverlay);
+        document.body.classList.add("scroll-hidden");
       }
     });
+
+    function createOverlay(content) {
+      const overlayElement = document.createElement("div");
+      overlayElement.classList.add("overlay");
+
+      const containerElement = document.createElement("div");
+      containerElement.classList.add("container--overlay");
+
+      const contentElement = document.createElement("div");
+      contentElement.classList.add("content--overlay");
+      contentElement.innerHTML = content;
+
+      const closeElement = document.createElement("button");
+      contentElement.appendChild(closeElement);
+      closeElement.classList.add("btn");
+      closeElement.textContent = "Закрыть";
+      closeElement.addEventListener("click", function () {
+        document.body.removeChild(overlayElement);
+        document.body.classList.remove('scroll-hidden');
+      });
+
+      overlayElement.appendChild(containerElement);
+      containerElement.appendChild(closeElement);
+      containerElement.appendChild(contentElement);
+
+      return overlayElement;
+    }
   }
 });
 
@@ -140,7 +175,7 @@ function validateField(form__block) {
 
 const phone = document.querySelector('.phone-js');
 
-phone.addEventListener('keydown', function(e) {
+phone.addEventListener('keydown', function (e) {
   let isDigit = false;
   let isDash = false;
   let isControl = false;
@@ -154,10 +189,10 @@ phone.addEventListener('keydown', function(e) {
   }
 
   if (e.key == 'ArrowLeft' || e.key == 'ArrowRight' || e.key == 'Backspace') {
-    isControl == true;
+    isControl = true;
   }
   if (!isDigit && !isDash && !isControl) {
     e.preventDefault();
   }
- // console.log(e.key);
+  // console.log(e.key);
 });
