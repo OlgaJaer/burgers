@@ -465,11 +465,16 @@
             <img src="./images/content/reviews/photo-1.jpg" alt="фотография Константина Спилберга" class="reviews__item-img">
             <div class="reviews__item-layer">
               <div class="reviews__item-content">
-                <h3 class="reviews__item-title">Константин Спилберг</h3>
+                <h3 class="reviews__item-title">Анна Спилберг</h3>
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                  <div class="reviews__item-fulltext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
+                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
+                    а сыр таким расплавленным.Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
+                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
+                    а сыр таким расплавленным.</div>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -482,7 +487,17 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                  <div class="reviews__item-fulltext">
+                    Жаль, пахнут бургеры так плохо!
+                 Нас держат повара за лохов.
+                 В такую стрёмную эпоху
+                 что остаётся делать лоху?
+                 Придётся, чтоб не отравиться,
+                 сидеть на хлебе да водице,
+                 а поварам  вернуть весь брак.
+                 Ешь эту гадость сам, Барак! 
+                  </div>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -495,7 +510,7 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -521,7 +536,7 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -534,7 +549,7 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -547,7 +562,7 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -560,7 +575,7 @@
                 <div class="reviews__item-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                   забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                   а сыр таким расплавленным.</div>
-                <button class="btn btn--black">Подробнее</button>
+                <button class="btn btn--black btn--js">Подробнее</button>
               </div>
             </div>
           </li>
@@ -588,6 +603,7 @@
                   <input type="text" class="form__input phone-js" placeholder="89212264923" name="phone" required>
                   <div class="error"></div>
                 </label>
+                
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
@@ -612,8 +628,9 @@
                   <div class="form__block-title">Этаж</div>
                   <input type="text" class="form__input" name="floor">
                 </label>
-                <input type="hidden" name="to" value="olgar.mamaeva@rambler.ru">
+                
               </div>
+              <input type="hidden" name="to" value="olgar.mamaeva@rambler.ru">
             </div>
 
             <div class="form__col form__col-rigth">
@@ -791,6 +808,17 @@
       </ul>
     </div>
   </nav>
+  
+  <div class="reviews--overlay">
+   <div class="reviews__container">
+      
+        <button class="reviews-close">
+          <svg class="fixed-menu__close-icon">
+            <use xlink:href="images/sprite.svg#cross"></use>
+          </svg>
+        </button>
+   </div>
+  </div>
   <script src="js/common.js"></script>
 </body>
 

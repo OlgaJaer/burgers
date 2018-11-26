@@ -2499,7 +2499,7 @@
         </defs>
         <g>
             <g opacity=".7" transform="translate(-715 -32)">
-                <use fill="#fff" xlink:href="#e1xwa"/>
+                <use xlink:href="#e1xwa"/>
             </g>
         </g>
     </symbol>

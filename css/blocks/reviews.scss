@@ -80,3 +80,62 @@
     transform: scale(1);
   }
 }
+
+.reviews__open {
+  display: flex;
+  overflow: hidden;
+  background-color: rgba(47, 50, 52, 0.7);
+}
+
+.reviews__container {
+  width: 460px;
+  height: 254px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  line-height: 24px;
+  color: #2f3234;
+  border-radius: 5px;
+  padding: 25px 20px;
+
+  @include tablets {
+    width: 473px;
+    height: 254px;
+  }
+
+  @include phones {
+    width: 275px;
+    height: 109px;
+    
+  }
+}
+
+.reviews__item-fulltext {
+  display: none;
+  &-active {
+    display: flex;
+  }
+}
+
+.reviews-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  padding: 15px;
+  background-color: transparent;
+  border-color: transparent;
+  box-sizing: content-box;
+
+  use {
+    stroke: $red;
+    fill: $red;
+  }
+}
+
+.reviews__title-overlay {
+  color: #2f3234;
+}

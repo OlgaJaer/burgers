@@ -29,6 +29,10 @@
   padding: 0;
   border: transparent;
 
+  @include phones {
+    width: 50px;
+  }
+
   & h3 {
     @include headline;
     color: #fff;
@@ -43,6 +47,10 @@
     left: 50%;
     white-space: nowrap;
     margin-top: -20px;
+
+    @include phones {
+      font-size: 34px;
+    }
   }
 }
 
@@ -78,13 +86,17 @@
   .menu-acc__text {
     width: 528px;
 
-   @include tablets {
-     width: calc(100vw - 270px); 
+    @include tablets {
+      width: calc(100vw - 270px);
     }
 
-  //  @include phones {
-   //  width:  340px;
-  //  }
+    @include phones {
+      width: calc(100vw - 200px);
+    }
+
+    //  @include phones {
+    //  width:  340px;
+    //  }
   }
 }
 

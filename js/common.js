@@ -117,13 +117,17 @@ send.addEventListener('click', e => {
       if (xhr.status == 200) {
         formOverlay = createOverlay("Сообщение отправлено");
         document.body.appendChild(formOverlay);
-        document.body.classList.add("scroll-hidden");
+
       } else {
         formOverlay = createOverlay("Что-то не так");
         document.body.appendChild(formOverlay);
-        document.body.classList.add("scroll-hidden");
+        // document.body.classList.add("scroll-hidden"); 
       }
     });
+
+    setTimeout(function () {
+      document.body.removeChild(formOverlay);
+    }, 3000);
 
     function createOverlay(content) {
       const overlayElement = document.createElement("div");
@@ -140,9 +144,10 @@ send.addEventListener('click', e => {
       contentElement.appendChild(closeElement);
       closeElement.classList.add("btn");
       closeElement.textContent = "Закрыть";
-      closeElement.addEventListener("click", function () {
+      closeElement.addEventListener("click", function (e) {
+        e.preventDefault();
         document.body.removeChild(overlayElement);
-        document.body.classList.remove('scroll-hidden');
+        // document.body.classList.remove('scroll-hidden');
       });
 
       overlayElement.appendChild(containerElement);
@@ -195,4 +200,33 @@ phone.addEventListener('keydown', function (e) {
     e.preventDefault();
   }
   // console.log(e.key);
+});
+
+//модальное окно-отзывы
+const $openButton = $(".btn--js");
+const $reviewsOverlay = $(".reviews--overlay");
+//const $closeMenu = $(".fixed-menu__close");
+//var reviewTitle = $(".reviews__item-title");
+var reviewText = $(".reviews__item-fulltext");
+const $reviewContainer = $('.reviews__container')
+
+$openButton.on('click', function (e) {
+  e.preventDefault();
+  let reviewTitle = this.closest('.reviews__item-title');
+
+  $reviewsOverlay.fadeIn().addClass('reviews__open');
+  $('body').addClass('scroll-hidden');
+  
+  $reviewContainer.append(reviewTitle);
+  /*.addClass('reviews__item-title');
+  $reviewTitle.addClass('reviews__title-overlay');
+  $reviewContainer.add('div').addClass('reviews__item-fulltext');
+  $reviewText.addClass('reviews__item-fulltext-active');*/
+
+});
+
+$reviewsOverlay.on('click', function (e) {
+  e.preventDefault();
+  $reviewsOverlay.fadeOut().removeClass('reviews__open');
+  $('body').removeClass('scroll-hidden');
 });
