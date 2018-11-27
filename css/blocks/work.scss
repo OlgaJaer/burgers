@@ -1,3 +1,26 @@
 .work {
   background: url("../images/bg/BG_.jpg") center center /cover no-repeat;
 }
+
+.container--work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.video-content {
+  width: 720px;
+  height: auto;
+
+  @include phones {
+    width: 460px;
+  }
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}

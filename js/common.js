@@ -206,14 +206,15 @@ phone.addEventListener('keydown', function (e) {
 const $openButton = $(".btn--js");
 const $reviewsOverlay = $(".reviews--overlay");
 //const $closeMenu = $(".fixed-menu__close");
-//var reviewTitle = $(".reviews__item-title");
+
 var reviewText = $(".reviews__item-fulltext");
-const $reviewContainer = $('.reviews__container')
+const $reviewContainer = $('.reviews__container');
 
 $openButton.on('click', function (e) {
   e.preventDefault();
-  let reviewTitle = this.closest('.reviews__item-title');
-
+  var $this = $(this);
+  var reviewTitle = $this.closest('.reviews__item-title');
+console.log(reviewTitle);
   $reviewsOverlay.fadeIn().addClass('reviews__open');
   $('body').addClass('scroll-hidden');
   

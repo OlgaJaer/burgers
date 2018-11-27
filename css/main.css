@@ -184,6 +184,8 @@ footer { width: 100%; }
 
 @media (max-width: 480px) { .headline--burgers { font-size: 3.57143rem; margin-bottom: 5%; } }
 
+.headline--work { color: #2f3234; font-size: 4.35714rem; }
+
 .hero { background: url("../images/bg/video-bg.jpg") center center/cover no-repeat; }
 
 .container--hero { height: 100%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
@@ -555,6 +557,14 @@ footer { width: 100%; }
 .content--overlay { text-align: center; padding-bottom: 30px; }
 
 .work { background: url("../images/bg/BG_.jpg") center center/cover no-repeat; }
+
+.container--work { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; padding-top: 80px; }
+
+.video-content { width: 720px; height: auto; }
+
+@media (max-width: 480px) { .video-content { width: 460px; } }
+
+video { width: 100%; height: auto; max-height: 100%; }
 
 .contacts { position: relative; background: url("../images/bg/map.png") center center/cover no-repeat; }
 
