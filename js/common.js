@@ -203,31 +203,34 @@ phone.addEventListener('keydown', function (e) {
 });
 
 //модальное окно-отзывы
+$(function () {
 const $openButton = $(".btn--js");
 const $reviewsOverlay = $(".reviews--overlay");
-//const $closeMenu = $(".fixed-menu__close");
+var $modalTitle = $('.reviews__title');
+var $modalText = $('.reviews__text');
 
-var reviewText = $(".reviews__item-fulltext");
+//var reviewText = $(".reviews__item-fulltext");
 const $reviewContainer = $('.reviews__container');
 
 $openButton.on('click', function (e) {
   e.preventDefault();
-  var $this = $(this);
-  var reviewTitle = $this.closest('.reviews__item-title');
-console.log(reviewTitle);
+  var $thisBtn = $(this);
+  var reviewTitle = $thisBtn.closest('.reviews__item-title');
+  var reviewText = $thisBtn.closest('.reviews__item-text');
+  console.log(reviewTitle);
+  console.log(reviewText);
   $reviewsOverlay.fadeIn().addClass('reviews__open');
   $('body').addClass('scroll-hidden');
-  
-  $reviewContainer.append(reviewTitle);
-  /*.addClass('reviews__item-title');
-  $reviewTitle.addClass('reviews__title-overlay');
-  $reviewContainer.add('div').addClass('reviews__item-fulltext');
-  $reviewText.addClass('reviews__item-fulltext-active');*/
+  $modalTitle.replaceWith(reviewTitle);
 
+  $modalText.replaceWith(reviewText);
+  
 });
 
 $reviewsOverlay.on('click', function (e) {
   e.preventDefault();
   $reviewsOverlay.fadeOut().removeClass('reviews__open');
   $('body').removeClass('scroll-hidden');
+});
+
 });

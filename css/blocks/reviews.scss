@@ -108,12 +108,20 @@
   @include phones {
     width: 275px;
     height: 109px;
-    
+  }
+
+  .reviews__title {
+    color: #2f3234;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28.11px;
   }
 }
 
 .reviews__item-fulltext {
   display: none;
+
   &-active {
     display: flex;
   }
