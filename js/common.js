@@ -204,33 +204,46 @@ phone.addEventListener('keydown', function (e) {
 
 //модальное окно-отзывы
 $(function () {
-const $openButton = $(".btn--js");
-const $reviewsOverlay = $(".reviews--overlay");
-var $modalTitle = $('.reviews__title');
-var $modalText = $('.reviews__text');
+  const $openButton = $(".btn--js");
+  const $reviewsOverlay = $(".reviews--overlay");
+  var $modalTitle = $('.reviews__title');
+  var $modalText = $('.reviews__text');
 
-//var reviewText = $(".reviews__item-fulltext");
-const $reviewContainer = $('.reviews__container');
+  //var reviewText = $(".reviews__item-fulltext");
+  const $reviewContainer = $('.reviews__container');
 
-$openButton.on('click', function (e) {
-  e.preventDefault();
-  var $thisBtn = $(this);
-  var reviewTitle = $thisBtn.closest('.reviews__item-title');
-  var reviewText = $thisBtn.closest('.reviews__item-text');
-  console.log(reviewTitle);
-  console.log(reviewText);
-  $reviewsOverlay.fadeIn().addClass('reviews__open');
-  $('body').addClass('scroll-hidden');
-  $modalTitle.replaceWith(reviewTitle);
+  $openButton.on('click', function (e) {
+    e.preventDefault();
+    var $thisBtn = $(this);
+    var reviewTitle = $thisBtn.closest('.reviews__item-title');
+    var reviewText = $thisBtn.closest('.reviews__item-text');
+    console.log(reviewTitle);
+    console.log(reviewText);
+    $reviewsOverlay.fadeIn().addClass('reviews__open');
+    $('body').addClass('scroll-hidden');
+    // $modalTitle.replaceWith(reviewTitle);
 
-  $modalText.replaceWith(reviewText);
+    // $modalText.replaceWith(reviewText);
+
+  });
+
+  $reviewsOverlay.on('click', function (e) {
+    e.preventDefault();
+    $reviewsOverlay.fadeOut().removeClass('reviews__open');
+    $('body').removeClass('scroll-hidden');
+  });
+
+  //one scroll page
+
+  $('.one-time').slick({
+    vertical: true,
+    verticalSwiping: true,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+ 
   
-});
-
-$reviewsOverlay.on('click', function (e) {
-  e.preventDefault();
-  $reviewsOverlay.fadeOut().removeClass('reviews__open');
-  $('body').removeClass('scroll-hidden');
-});
-
 });
