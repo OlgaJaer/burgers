@@ -1,0 +1,22 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "",
+ /* "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaJaer/burgers.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/OlgaJaer/burgers/issues"
+  },
+  "homepage": "https://github.com/OlgaJaer/burgers#readme",*/
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

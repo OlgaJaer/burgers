@@ -235,7 +235,7 @@ $(function () {
 
   //one scroll page
 
-  $('.one-time').slick({
+ /* $('.one-time').slick({
     vertical: true,
     verticalSwiping: true,
     dots: true,
@@ -243,7 +243,7 @@ $(function () {
     speed: 300,
     slidesToShow: 1,
     adaptiveHeight: true
-  });
+  });*/
  
   
 });

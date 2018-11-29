@@ -1,6 +1,37 @@
 .contacts {
   position: relative;
-  background: url("../images/bg/map.png") center center / cover no-repeat;
+  width: 100%;
+}
+
+.map {
+  height: 100vh;
+  width: 100%;
+}
+
+.map__hint {
+  @include headline;
+  padding: 20px;
+  min-height: 55px;
+  min-width: 150px;
+  font-size: 20px;
+  line-height: 1;
+  color: $yellow;
+  background-color: hsl(236, 94%, 60%);
+  background-image: linear-gradient(to top, #3b7df9 0%, #38c1eb 48%, #3b8df9 74%, #3bcdf9 100%);
+}
+
+.map__balloon {
+  @include headline;
+  padding: 20px;
+  font-size: 25px;
+  line-height: 1;
+  color: $orange;
+  background-color: hsl(236, 94%, 60%);
+  background-image: linear-gradient(to top, #3b7df9 0%, #38c1eb 48%, #3b8df9 74%, #3bcdf9 100%);
+
+  span {
+    color: $yellow;
+  }
 }
 
 .footer {
@@ -13,6 +44,7 @@
   justify-content: space-between;
   text-align: start;
   padding: 10px 80px;
+  z-index: 100;
 
   @include phones {
     flex-direction: column;
@@ -62,6 +94,12 @@
     width: 23px;
     height: 23px;
     margin-left: 19px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &:first-child {
 
