@@ -81,7 +81,7 @@
   }
 }
 
-.reviews__open {
+.reviews__open, .reviews--overlay {
   display: flex;
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.7);

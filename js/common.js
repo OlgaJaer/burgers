@@ -204,46 +204,111 @@ phone.addEventListener('keydown', function (e) {
 
 //модальное окно-отзывы
 $(function () {
-  const $openButton = $(".btn--js");
-  const $reviewsOverlay = $(".reviews--overlay");
-  var $modalTitle = $('.reviews__title');
-  var $modalText = $('.reviews__text');
+   var $openButton = $(".btn--js");
+   var modalTitle = $('.reviews__title');
+   var modalText = $('.reviews__text');
+   var $reviewsOverlay = $(".reviews--overlay");
+   $openButton.on('click', function (e) {
+     e.preventDefault();
+     let thisBtn = this;
+     let reviewTitle = thisBtn.previousElementSibling.previousElementSibling.textContent;
+     let reviewText = thisBtn.nextElementSibling.textContent;
 
-  //var reviewText = $(".reviews__item-fulltext");
-  const $reviewContainer = $('.reviews__container');
+     modalTitle.innerText = reviewTitle;
+     modalText.textContent = reviewText;
+     console.log(modalTitle);
+     
+     $reviewsOverlay.fadeIn().addClass('reviews__open');
+     $('body').addClass('scroll-hidden');
+   });
 
-  $openButton.on('click', function (e) {
-    e.preventDefault();
-    var $thisBtn = $(this);
-    var reviewTitle = $thisBtn.closest('.reviews__item-title');
-    var reviewText = $thisBtn.closest('.reviews__item-text');
-    console.log(reviewTitle);
-    console.log(reviewText);
-    $reviewsOverlay.fadeIn().addClass('reviews__open');
-    $('body').addClass('scroll-hidden');
-    // $modalTitle.replaceWith(reviewTitle);
+   $reviewsOverlay.on('click', function (e) {
+     e.preventDefault();
+     $reviewsOverlay.fadeOut().removeClass('reviews__open');
+     $('body').removeClass('scroll-hidden');
+   });
+  
+  /* function openPopup() {
 
-    // $modalText.replaceWith(reviewText);
+    const openButton = document.querySelectorAll(".btn--js");
+    const showPopup = buildPopup(content, title);
 
-  });
+    for (var i = 0; i < openButton.length; i++) {
+      console.log(openButton);
+      openButton[i].addEventListener('click', function (e) {
+        console.log(openButton);
+        let thisBtn = this;
+        var content = thisBtn.nextElementSibling.textContent;
+        var title = thisBtn.previousElementSibling.previousElementSibling.textContent;
+        document.body.appendChild(showPopup);
+        console.log(title);
+        console.log(content);
+      });
 
-  $reviewsOverlay.on('click', function (e) {
-    e.preventDefault();
-    $reviewsOverlay.fadeOut().removeClass('reviews__open');
-    $('body').removeClass('scroll-hidden');
-  });
+    }
+  }
+
+  openPopup()
+
+  function buildPopup(content, title) {
+    const popupElement = document.createElement("div");
+    popupElement.classList.add("reviews--overlay");
+    popupElement.addEventListener("click", e => {
+      if (e.target === overlayElement) {
+        closeElement.click();
+      }
+    });
+
+    const containerElement = document.createElement("div");
+    containerElement.classList.add("reviews__container")
+
+    const textElement = document.createElement("div");
+    textElement.classList.add("reviews__text");
+    textElement.innerHTML = content;
+
+    const titleElement = document.createElement("h3");
+    titleElement.classList.add("reviews__title");
+    titleElement.textContent = title;
+
+    const closeElement = document.createElement("button");
+    closeElement.classList.add("reviews-close");
+    closeElement.textContent = "x";
+    closeElement.addEventListener("click", function () {
+      document.body.removeChild(PopupElement);
+    });
+    closeElement.addEventListener('click', function (event) {
+      event.preventDefault();
+    });
+
+    popupElement.appendChild(containerElement);
+    containerElement.appendChild(closeElement);
+    containerElement.appendChild(titleElement);
+    containerElement.appendChild(textElement);
+
+    return popupElement;
+  };
+
+
+
 
   //one scroll page
 
- /* $('.one-time').slick({
-    vertical: true,
-    verticalSwiping: true,
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });*/
- 
-  
+  /* $('.one-time').slick({
+     vertical: true,
+     verticalSwiping: true,
+     dots: true,
+     infinite: true,
+     speed: 300,
+     slidesToShow: 1,
+     adaptiveHeight: true
+   });*/
+  $(document).ready(function () {
+
+    $('.bxslider').bxSlider({
+      mode: 'vertical',
+      infiniteLoop: false,
+    });
+  });
+
+
 });
