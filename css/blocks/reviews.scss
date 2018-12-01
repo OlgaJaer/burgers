@@ -58,7 +58,7 @@
     }
   }
 
-  &-text {
+  &-text { 
 
     @include tablets {
       margin-bottom: 5%;
@@ -84,7 +84,8 @@
 .reviews__open, .reviews--overlay {
   display: flex;
   overflow: hidden;
-  background-color: rgba(47, 50, 52, 0.7);
+  background-color: rgba(46, 48, 50, 0.9);
+  opacity: 0.9;
 }
 
 .reviews__container {

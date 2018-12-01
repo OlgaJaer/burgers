@@ -1,3 +1,91 @@
+/*const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+const setActiveMenuItem = itemEq => {
+  $(".pagination__list__item")
+    .eq(itemEq)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+};
+
+const performTransition = sectionEq => {
+  const position = '$(sectionEq * -100)%';
+  const mouseInertionIsFinished = 300;
+  const transitiovIsFinished = 1000;
+
+  if (inScroll === false) {
+    inScroll = true;
+    display.css({
+      transform: "translateY(${position})"
+    });
+    sections
+      .eq(sectionEq)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+
+    setTimeout(() => {
+      inScroll = false;
+      setActiveMenuItem(sectionEq);
+    }, transitiovIsFinished + mouseInertionIsFinished);
+  }
+};
+
+const scrollToSection = direction => {
+  const activeSection = section.filter(".active");
+  const prevSection = activeSection.prev();
+  const nextSection = activeSection.next();
+
+  if (direction === "up" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+
+  if (direction === "down" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+};
+
+$(document).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    //down
+    console.log("down");
+
+    scrollToSection("down");
+  }
+
+  if (deltaY < 0) {
+    //up
+    console.log('up');
+
+    scrollToSection("up");
+  }
+  console.log(e);
+});
+
+$(document).on("keydown", e => {
+  console.log(e.keyCode);
+3
+  switch (e.keyCode) {
+    case 40:
+      scrollToSection("down");
+      break;
+    case 38:
+      scrollToSection("up");
+      break;
+  }
+});
+
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+  const target = $(e.currentTarget).attr('data-scroll-to');
+
+  performTransition(target);
+})
+*/
 const $hamburger = $(".hamburger-menu__link");
 const $fixedMenu = $(".fixed-menu");
 const $closeMenu = $(".fixed-menu__close");
@@ -52,7 +140,6 @@ const $right = $('.navigation--right');
 const $left = $('.navigation--left');
 const $slider = $('.slider');
 
-console.log('viewport');
 
 $right.on('click', function () {
   nextSlide();
@@ -204,111 +291,35 @@ phone.addEventListener('keydown', function (e) {
 
 //модальное окно-отзывы
 $(function () {
-   var $openButton = $(".btn--js");
-   var modalTitle = $('.reviews__title');
-   var modalText = $('.reviews__text');
-   var $reviewsOverlay = $(".reviews--overlay");
-   $openButton.on('click', function (e) {
-     e.preventDefault();
-     let thisBtn = this;
-     let reviewTitle = thisBtn.previousElementSibling.previousElementSibling.textContent;
-     let reviewText = thisBtn.nextElementSibling.textContent;
+  var $openButton = $(".btn--js");
+  var modalTitle = $('.reviews__title');
+  var modalText = $('.reviews__text');
+  var $reviewsOverlay = $(".reviews--overlay");
+  $openButton.on('click', function (e) {
+    e.preventDefault();
+    let thisBtn = this;
+    let reviewTitle = thisBtn.previousElementSibling.previousElementSibling.textContent;
+    let reviewText = thisBtn.previousElementSibling.textContent;
 
-     modalTitle.innerText = reviewTitle;
-     modalText.textContent = reviewText;
-     console.log(modalTitle);
-     
-     $reviewsOverlay.fadeIn().addClass('reviews__open');
-     $('body').addClass('scroll-hidden');
-   });
+    modalTitle.text(reviewTitle);
+    modalText.text(reviewText);
+    console.log(modalTitle);
 
-   $reviewsOverlay.on('click', function (e) {
-     e.preventDefault();
-     $reviewsOverlay.fadeOut().removeClass('reviews__open');
-     $('body').removeClass('scroll-hidden');
-   });
-  
-  /* function openPopup() {
+    $reviewsOverlay.fadeIn().addClass('reviews__open');
+    $('body').addClass('scroll-hidden');
+  });
 
-    const openButton = document.querySelectorAll(".btn--js");
-    const showPopup = buildPopup(content, title);
-
-    for (var i = 0; i < openButton.length; i++) {
-      console.log(openButton);
-      openButton[i].addEventListener('click', function (e) {
-        console.log(openButton);
-        let thisBtn = this;
-        var content = thisBtn.nextElementSibling.textContent;
-        var title = thisBtn.previousElementSibling.previousElementSibling.textContent;
-        document.body.appendChild(showPopup);
-        console.log(title);
-        console.log(content);
-      });
-
-    }
-  }
-
-  openPopup()
-
-  function buildPopup(content, title) {
-    const popupElement = document.createElement("div");
-    popupElement.classList.add("reviews--overlay");
-    popupElement.addEventListener("click", e => {
-      if (e.target === overlayElement) {
-        closeElement.click();
-      }
-    });
-
-    const containerElement = document.createElement("div");
-    containerElement.classList.add("reviews__container")
-
-    const textElement = document.createElement("div");
-    textElement.classList.add("reviews__text");
-    textElement.innerHTML = content;
-
-    const titleElement = document.createElement("h3");
-    titleElement.classList.add("reviews__title");
-    titleElement.textContent = title;
-
-    const closeElement = document.createElement("button");
-    closeElement.classList.add("reviews-close");
-    closeElement.textContent = "x";
-    closeElement.addEventListener("click", function () {
-      document.body.removeChild(PopupElement);
-    });
-    closeElement.addEventListener('click', function (event) {
-      event.preventDefault();
-    });
-
-    popupElement.appendChild(containerElement);
-    containerElement.appendChild(closeElement);
-    containerElement.appendChild(titleElement);
-    containerElement.appendChild(textElement);
-
-    return popupElement;
-  };
-
-
-
-
-  //one scroll page
-
-  /* $('.one-time').slick({
-     vertical: true,
-     verticalSwiping: true,
-     dots: true,
-     infinite: true,
-     speed: 300,
-     slidesToShow: 1,
-     adaptiveHeight: true
-   });*/
-  $(document).ready(function () {
-
-    $('.bxslider').bxSlider({
-      mode: 'vertical',
-      infiniteLoop: false,
-    });
+  $reviewsOverlay.on('click', function (e) {
+    e.preventDefault();
+    $reviewsOverlay.fadeOut().removeClass('reviews__open');
+    $('body').removeClass('scroll-hidden');
   });
 
 
+});
+
+$('.bxslider').bxSlider({
+  mode: 'vertical',
+  infiniteLoop: false,
+  hideControlOnEnd: true
 });
