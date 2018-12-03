@@ -60,7 +60,7 @@ function init() {
             
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/map-marker.svg',
+                iconImageHref: './images/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-23, -57],
                // iconImageClipRect: [[0, 0], [46, 57]]
@@ -70,7 +70,7 @@ function init() {
     var clusterer = new ymaps.Clusterer({
         clusterIcons: [
             {
-                href: '../images/drops-full.png',
+                href: './images/drops-full.png',
                 size: [50, 50],
                 offset: [-25, -25]
             }
