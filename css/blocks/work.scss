@@ -11,16 +11,95 @@
 }
 
 .video-content {
-  width: 720px;
-  height: auto;
+  width: 100%;
 
   @include phones {
     width: 460px;
   }
 }
 
-video {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
+.player {
+  width: 100%
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: #3e3e3e;
+}
+
+.player__start {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-left-color: #626262;
+  border-right-width: 0;
+  background: transparent;
+  outline: none;
+  transition: border-left-color .3s;
+
+  &.paused {
+    border-left-color: #fff;
+  }
+
+  //border: none;
+  //background: url("../images/sprite.svg#play") center center no-repeat;
+}
+
+.player__playback {
+  position: absolute;
+  height: 4px;
+  width: 446px;
+  background: #626262;
+  top: 6px;
+  left: 50px;
+  margin: 10px 0;
+
+  &-btn {
+    width: 13px;
+    height: 13px;
+    background-color: #626262;
+    border-radius: 50%;
+    margin-top: -5px;
+  }
+}
+
+.player__scale {
+  position: absolute;
+  height: 4px;
+  width: 58px;
+  background: #626262;
+  top: 15px;
+  right: 21px;
+
+  &-btn {
+    width: 13px;
+    height: 13px;
+    background-color: #626262;
+    border-radius: 50%;
+    margin-top: -5px;
+  }
+}
+
+.player__volume {
+
+  margin-right: 20px;
+
+  &-icon {
+    position: absolute;
+    right: 98px;
+    top: 7px;
+    width: 25px;
+    height: 22px;
+
+    use {
+      fill: #626262;
+    }
+  }
 }

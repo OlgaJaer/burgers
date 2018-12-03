@@ -147,6 +147,66 @@
                     </div>
                     <div class="burgers__consist-title">Состав</div>
                   </div>
+                  <div class="burger__consist-list">
+                    <div class="consist-wrap">
+                      <ul class="consist__list">
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#beef"></use>
+                            </svg>
+                          </div>
+                          <span class="consist__name"></span>
+                          <span class="consist__text"></span>
+                        </li>
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#buns"></use>
+                            </svg>
+                          </div>
+                          <span class="consist__name"></span>
+                          <span class="consist__text"></span>
+                        </li>
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#salad"></use>
+                            </svg>
+                          </div>
+                          <span class="consist__name"></span>
+                          <span class="consist__text"></span>
+                        </li>
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#sauce"></use>
+                            </svg>
+                            <div class="consist__img"></div>
+                            <span class="consist__name"></span>
+                            <span class="consist__text"></span>
+                        </li>
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#cucumber"></use>
+                            </svg>
+                          </div>
+                          <span class="consist__name"></span>
+                          <span class="consist__text"></span>
+                        </li>
+                        <li class="consist__item">
+                          <div class="consist__img">
+                            <svg class="consist__icon">
+                              <use xlink:href="images/sprite.svg#cheese"></use>
+                            </svg>
+                          </div>
+                          <span class="consist__name"></span>
+                          <span class="consist__text"></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                   <div class="burgers__kkal">
                     <div class="burgers__kkal-icon">
                       <svg class="kkal">
@@ -587,15 +647,29 @@
       <section id="work" class="section work">
         <div class="container container--work">
           <h2 class="headline headline--work">как мы работаем</h2>
-          <div class="video-content">
-            <!--<video controls preload="none">
-              <source src="https://html5book.ru/wp-content/themes/papercuts/video/martynko.mp4" type="video/mp4">
-              </video>-->
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/ISOsErt6oQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
 
+          <div class="player">
+            <div class="player__wrraper">
+              <div id="yt-player" class="video-content"></div>
+              <div class="play__splash"></div>
+            </div>
+            <div class="player__controls">
+              <div class="player__start"></div>
+              <div class="player__playback">
+                <div class="player__playback-btn"></div>
+              </div>
+
+              <div class="player__volume">
+                <svg class="player__volume-icon">      
+                    <use xlink:href="images/sprite.svg#volume"></use>
+                </svg>
+              </div>
+              <div class="player__scale">
+                <div class="player__scale-btn"></div>
+              </div>
+
+            </div>
           </div>
-        </div>
       </section>
 
       <section id="order" class="section order">
@@ -731,7 +805,7 @@
 
     </div>
 
-   
+
 
   </div>
   <div class="navigation">
@@ -743,7 +817,7 @@
       </div>
     </a>
   </div>
- <!-- <nav class="pagination">
+  <!-- <nav class="pagination">
     <ul class="pagination__list">
       <li class=" pagination__list__item">
         <a href="#hero" class="pagination__list__item-link" data-scroll-to="1">
@@ -819,8 +893,8 @@
       </ul>
     </div>
   </nav>
-  
-    <div class="reviews--overlay">
+
+  <div class="reviews--overlay">
     <div class="reviews__container">
       <h3 class="reviews__title">Константин </h3>
       <div class="reviews__text">
@@ -834,12 +908,14 @@
       </button>
     </div>
   </div>
- 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="bxslider/jquery.bxslider.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/common.js" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/player.js"> </script>
 </body>
 
 </html>
