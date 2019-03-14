@@ -16,3 +16,5 @@ twitter.svg
 vk.svg
 volume.svg
 error.js
+node_modules
+package-lock.json
