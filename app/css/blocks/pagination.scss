@@ -37,13 +37,15 @@
   }
 }
 
-.navigation {
-  position: fixed;
+.navigation__next {
+  position: absolute;
   top: 90%;
   left: 50%;
+  width: 30px;
+  height: 15px;
 }
 
 .arrow-scroll {
-      width: 30px;
-      height: 15px;
-    }
+  width: 30px;
+  height: 15px;
+}

@@ -86,6 +86,70 @@ $('[data-scroll-to]').on('click', e => {
   performTransition(target);
 })
 */
+$(function(){
+    
+  let $links = $('.pagescroll a');
+  
+  $links.on('click', function (e) {
+    e.preventDefault();
+    
+    $links.removeClass('active');
+    let ref = $(this).attr('href'); 
+    //.addClass('active')
+    let $target = $(ref);
+  
+    if ($target.length > 0) {
+      let pos = $target.offset().top;
+      let current = $(window).scrollTop();
+      let diff = Math.abs(current - pos);
+     
+      $('html,body').animate({
+        scrollTop: pos
+      }, diff / 2);
+    }
+  });
+
+  let $btn = $(".to-top");
+  let btnShowed = false;
+
+  $(window).on('scroll', onScroll);
+
+  function onScroll() {
+    let pos = $(window).scrollTop(); 
+
+    if (!btnShowed && pos > window.innerHeight) {
+        $btn.stop(true).fadeIn(500);
+        btnShowed = true;
+    } else if(btnShowed && pos <= window.innerHeight){
+        $btn.stop(true).fadeOut(500);
+        btnShowed = false;
+    }
+
+    $links.removeClass('active');
+
+    for(let i = $links.length -1; i >= 0; i--){
+      let ref = $links.eq(i).attr('href');
+      let $header = $(ref);
+
+      if(pos > $header.offset().top - 200){
+        $links.eq(i).addClass('active');
+        break;
+      }
+    }
+  };
+
+  onScroll();
+
+  $btn.click(function () {
+    let pos = $(window).scrollTop();
+
+    $('body,html').animate({
+      scrollTop: 0
+    }, pos / 3);
+  });
+});
+
+
 const $hamburger = $(".hamburger-menu__link");
 const $fixedMenu = $(".fixed-menu");
 const $closeMenu = $(".fixed-menu__close");
