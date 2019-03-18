@@ -5,6 +5,10 @@
     width: 1.25rem;
     z-index: 9999;
     text-align: center;
+
+    @include tablets {
+      display: none;
+    }
   
   &__item {
     position: relative;

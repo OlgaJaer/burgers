@@ -11,6 +11,7 @@
   display: none;
   animation: appear 1s;
   -webkit-animation: appear 1s;
+  z-index: 100;
 }
 
 .fixed-menu__open {

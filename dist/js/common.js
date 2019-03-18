@@ -89,25 +89,34 @@ $('[data-scroll-to]').on('click', e => {
 $(function(){
     
   let $links = $('.pagescroll a');
-  
-  $links.on('click', function (e) {
-    e.preventDefault();
+  //let $links = $('.fixed-menu__list a')
+  function onClick(btn) {
+    $(btn).on('click', function (e){
+      e.preventDefault();
     
-    $links.removeClass('active');
-    let ref = $(this).attr('href'); 
-    //.addClass('active')
-    let $target = $(ref);
+      $(btn).removeClass('active');
+      let ref = $(this).attr('href'); 
+      //.addClass('active')
+      let $target = $(ref);
   
-    if ($target.length > 0) {
-      let pos = $target.offset().top;
-      let current = $(window).scrollTop();
-      let diff = Math.abs(current - pos);
+      if ($target.length > 0) {
+        let pos = $target.offset().top;
+        let current = $(window).scrollTop();
+        let diff = Math.abs(current - pos);
      
-      $('html,body').animate({
-        scrollTop: pos
-      }, diff / 2);
-    }
-  });
+        $('html,body').animate({
+          scrollTop: pos
+        }, diff / 2);
+      }
+    });
+  }
+
+  onClick('.pagescroll a');
+  onClick('.fixed-menu__list a');
+  //$links.on('click', function (e) {
+    
+  //  }
+  //});
 
   let $btn = $(".to-top");
   let btnShowed = false;
@@ -153,6 +162,7 @@ $(function(){
 const $hamburger = $(".hamburger-menu__link");
 const $fixedMenu = $(".fixed-menu");
 const $closeMenu = $(".fixed-menu__close");
+const navLink = document.querySelectorAll(".fixed-menu__item-link");
 
 $hamburger.on('click', function (e) {
   e.preventDefault();
@@ -164,8 +174,14 @@ $hamburger.on('click', function (e) {
 $fixedMenu.on('click', function (e) {
   e.preventDefault();
   $fixedMenu.fadeOut().removeClass('fixed-menu__open');
-  $('body').removeClass('scroll-hidden');
+  $('body').removeClass('scroll-hidden');  
 });
+
+for (let i = 0; i < navLink.length; i += 1) {
+  navLink[i].addEventListener("click", function () {
+    $fixedMenu.fadeOut().removeClass('fixed-menu__open');
+  });
+}
 
 //аккордеон
 
@@ -381,8 +397,8 @@ $(function () {
 
 });
 
-$('.bxslider').bxSlider({
-  mode: 'vertical',
-  infiniteLoop: false,
-  hideControlOnEnd: true
-});
+//$('.bxslider').bxSlider({
+//  mode: 'vertical',
+//  infiniteLoop: false,
+//  hideControlOnEnd: true
+//});
