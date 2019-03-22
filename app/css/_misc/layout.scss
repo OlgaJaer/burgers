@@ -85,6 +85,12 @@ footer {
 }
 
 .section {
-  height: 100vh;
-  min-height: 550px;
+  //height: 100vh;
+  //min-height: 550px;
+  height: 100%;
+  min-height: 650px;
+
+  @include tablets {
+    min-height: initial;
+  }
 }

@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "gulp-live-server": "0.0.31",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.3"
   }
 }

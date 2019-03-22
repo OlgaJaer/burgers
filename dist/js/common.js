@@ -1,6 +1,9 @@
 const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
 
 const setActiveMenuItem = itemEq => {
   $('.pagescroll__item')
@@ -48,33 +51,35 @@ const scrollToSection = direction => {
   }
 }
 
-$(document).on('wheel', e => {
+$(document).on({
+  wheel: e => {
+    const direction = e.originalEvent.deltaY > 0 ? "down" : "up";
+    scrollToSection(direction);
+    /*const deltaY = e.originalEvent.deltaY;
+    console.log(deltaY);
+    if (deltaY > 0) {
+      console.log('down');
+      scrollToSection('down');
+    }
   
+    if (deltaY < 0 ) {
+      console.log("up");
+      scrollToSection('up');
+    }*/
+  },
+  keydown: e => {
+    console.log(e.keyCode);
   
-  const deltaY = e.originalEvent.deltaY;
-  console.log(deltaY);
-  if (deltaY > 0) {
-    console.log('down');
-    scrollToSection('down');
-  }
-
-  if (deltaY < 0 ) {
-    console.log("up");
-    scrollToSection('up');
-  }
-});
-
-$(document).on("keydown", e => {
-  console.log(e.keyCode);
-
-  switch (e.keyCode) {
-    case 40: 
-      scrollToSection("down");
-      break;
-    case 38:
-      scrollToSection("up");
-      break;
-  }
+    switch (e.keyCode) {
+      case 40: 
+        scrollToSection("down");
+        break;
+      case 38:
+        scrollToSection("up");
+        break;
+    }
+  },
+  touchmove: e => e.preventDefault //убираем белые полосы при скролинге
 });
 
 $('[data-scroll-to]').on('click', e => {
@@ -84,7 +89,28 @@ $('[data-scroll-to]').on('click', e => {
   performTransition(target);
 })
 
+if (isMobile) {
+  $(document).swipe({
+    swipe:function(
+      event, 
+      direction, 
+      distance, 
+      duration, 
+      fingerCount, 
+      fingerData
+      ) {
+    /*
+    *потому что библиотека возвращает фактическое перемещение пальца вниз/вверх, 
+    а функция scrollToSection работает на перемещении страницы
+    */
+      const scrollDirection = direction == "down" ? "up" : "down" ;
+  
+      scrollToSection(scrollDirection);
+    }
+  });  
+}
 
+ 
 
 /*$(function(){
     
