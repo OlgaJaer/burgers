@@ -1,76 +1,74 @@
-/*const sections = $('.section');
+const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
 
 const setActiveMenuItem = itemEq => {
-  $(".pagination__list__item")
+  $('.pagescroll__item')
     .eq(itemEq)
-    .addClass("active")
+    .addClass('activeS')
     .siblings()
-    .removeClass("active");
-};
+    .removeClass('activeS');
+}
 
 const performTransition = sectionEq => {
-  const position = '$(sectionEq * -100)%';
+  const position = `${sectionEq * -100}%`;
   const mouseInertionIsFinished = 300;
-  const transitiovIsFinished = 1000;
+  const transitionIsFinished = 1000;
 
   if (inScroll === false) {
     inScroll = true;
     display.css({
-      transform: "translateY(${position})"
+      transform: `translateY(${position})`
     });
-    sections
-      .eq(sectionEq)
-      .addClass("active")
+  
+    sections.eq(sectionEq)
+      .addClass('activeS')
       .siblings()
-      .removeClass("active");
+      .removeClass('activeS');
 
+//*исключить инерцию
     setTimeout(() => {
       inScroll = false;
       setActiveMenuItem(sectionEq);
-    }, transitiovIsFinished + mouseInertionIsFinished);
+    }, transitionIsFinished + mouseInertionIsFinished);
   }
 };
 
 const scrollToSection = direction => {
-  const activeSection = section.filter(".active");
+  const activeSection = sections.filter('.activeS');
   const prevSection = activeSection.prev();
   const nextSection = activeSection.next();
-
-  if (direction === "up" && prevSection.length) {
+   
+  if (direction == 'up' && prevSection.length) {
     performTransition(prevSection.index());
   }
-
-  if (direction === "down" && nextSection.length) {
+ 
+  if (direction == "down" && nextSection.length) {
     performTransition(nextSection.index());
   }
-};
+}
 
 $(document).on('wheel', e => {
+  
+  
   const deltaY = e.originalEvent.deltaY;
-
+  console.log(deltaY);
   if (deltaY > 0) {
-    //down
-    console.log("down");
-
-    scrollToSection("down");
+    console.log('down');
+    scrollToSection('down');
   }
 
-  if (deltaY < 0) {
-    //up
-    console.log('up');
-
-    scrollToSection("up");
+  if (deltaY < 0 ) {
+    console.log("up");
+    scrollToSection('up');
   }
-  console.log(e);
 });
 
 $(document).on("keydown", e => {
   console.log(e.keyCode);
-3
+
   switch (e.keyCode) {
-    case 40:
+    case 40: 
       scrollToSection("down");
       break;
     case 38:
@@ -85,8 +83,10 @@ $('[data-scroll-to]').on('click', e => {
 
   performTransition(target);
 })
-*/
-$(function(){
+
+
+
+/*$(function(){
     
   let $links = $('.pagescroll a');
   //let $links = $('.fixed-menu__list a')
@@ -113,10 +113,6 @@ $(function(){
 
   onClick('.pagescroll a');
   onClick('.fixed-menu__list a');
-  //$links.on('click', function (e) {
-    
-  //  }
-  //});
 
   let $btn = $(".to-top");
   let btnShowed = false;
@@ -156,7 +152,7 @@ $(function(){
       scrollTop: 0
     }, pos / 3);
   });
-});
+});*/
 
 
 const $hamburger = $(".hamburger-menu__link");

@@ -16,8 +16,8 @@
 <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
 <![endif]-->
   <div class="wrap">
-    <div class="maincontent 1-bxslider">
-      <section id="hero" class="section hero">
+    <div class="maincontent">
+      <section id="hero" class="section hero activeS">
         <div class="container container--hero ">
           <header class="header">
             <div class="header__col">
@@ -31,31 +31,31 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item menu__item--disable">
-                    <a href="#best" class="menu__item-link">о нас</a>
+                    <a href="#best" class="menu__item-link" data-scroll-to="1">о нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#burgers" class="menu__item-link">бургеры</a>
+                    <a href="#burgers" class="menu__item-link" data-scroll-to="2">бургеры</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#team" class="menu__item-link"> команда</a>
+                    <a href="#team" class="menu__item-link" data-scroll-to="3"> команда</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#burgers-menu" class="menu__item-link">меню </a>
+                    <a href="#burgers-menu" class="menu__item-link" data-scroll-to="4">меню </a>
                   </li>
                   <li class="menu__item">
-                    <a href="#reviews" class="menu__item-link">отзывы</a>
+                    <a href="#reviews" class="menu__item-link"data-scroll-to="5">отзывы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#work" class="menu__item-link">как мы работаем</a>
+                    <a href="#work" class="menu__item-link" data-scroll-to="6">как мы работаем</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#map" class="menu__item-link">контакты</a>
+                    <a href="#map" class="menu__item-link" data-scroll-to="8">контакты</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div class="header__col header__col-rigth">
-              <a href="#order" class="btn btn-order">заказать</a>
+              <a href="#order" class="btn btn-order" data-scroll-to="7">заказать</a>
             </div>
             <a href="#" class="hamburger-menu__link">
               <div class="hamburger-menu__link-bars"></div>
@@ -244,7 +244,7 @@
                   </div>
                   <div class="burgers__price">
                     <div class="burgers__price-title">500<span> рублей</span></div>
-                    <a href="#order" class="btn">заказать</a>
+                    <a href="#order" class="btn" data-scroll-to="7">заказать</a>
                   </div>
                 </div>
               </div>
@@ -340,7 +340,7 @@
                   </div>
                   <div class="burgers__price">
                     <div class="burgers__price-title">500<span> рублей</span></div>
-                    <a href="#order" class="btn">заказать</a>
+                    <a href="#order" class="btn" data-scroll-to="7">заказать</a>
                   </div>
                 </div>
               </div>
@@ -436,7 +436,7 @@
                   </div>
                   <div class="burgers__price">
                     <div class="burgers__price-title">500<span> рублей</span></div>
-                    <a href="#order" class="btn">заказать</a>
+                    <a href="#order" class="btn" data-scroll-to="7">заказать</a>
                   </div>
                 </div>
               </div>
@@ -532,7 +532,7 @@
                   </div>
                   <div class="burgers__price">
                     <div class="burgers__price-title">500<span> рублей</span></div>
-                    <a href="#order" class="btn">заказать</a>
+                    <a href="#order" class="btn" data-scroll-to="7">заказать</a>
                   </div>
                 </div>
               </div>
@@ -628,7 +628,7 @@
                   </div>
                   <div class="burgers__price">
                     <div class="burgers__price-title">500<span> рублей</span></div>
-                    <a href="#order" class="btn">заказать</a>
+                    <a href="#order" class="btn" data-scroll-to="7">заказать</a>
                   </div>
                 </div>
               </div>
@@ -1058,117 +1058,119 @@
       </main>
 
       <!--start pagescroll-->
-      <div class="pagescroll">
-        <ul class="pagescroll__list" id="menu">
-          <li class="pagescroll__item" data-menuanchor="section-first">
-            <a href="#hero" class="pagescroll__link active" title="первая секция">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-we">
-            <a href="#best" class="pagescroll__link" title="секция о нас">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-burgers">
-            <a href="#burgers" class="pagescroll__link" title="секция бургеры">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-team">
-            <a href="#team" class="pagescroll__link" title="секция команда">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-menu">
-            <a href="#burgers-menu" class="pagescroll__link" title="секция меню">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-reviews">
-            <a href="#reviews" class="pagescroll__link" title="секция отзывы">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-how">
-            <a href="#work" class="pagescroll__link" title="секция как работаем">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-form">
-            <a href="#order" class="pagescroll__link" title="секция форма">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-          <li class="pagescroll__item" data-menuanchor="section-contacts">
-            <a href="#map" class="pagescroll__link" title="секция контакты">
-              <div class="pagescroll__link-block"></div>
-            </a>
-          </li>
-        </ul>
-      </div>
+
       <!--end pagescroll-->
 
     </div>
+  </div>
+  <div class="pagescroll">
+    <ul class="pagescroll__list" id="menu">
+      <li class="pagescroll__item activeS" data-scroll-to="0">
+        <a href="#hero" class="pagescroll__link active" title="первая секция">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="1">
+        <a href="#best" class="pagescroll__link" title="секция о нас">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="2">
+        <a href="#burgers" class="pagescroll__link" title="секция бургеры">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="3">
+        <a href="#team" class="pagescroll__link" title="секция команда">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="4">
+        <a href="#burgers-menu" class="pagescroll__link" title="секция меню">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="5">
+        <a href="#reviews" class="pagescroll__link" title="секция отзывы">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="6">
+        <a href="#work" class="pagescroll__link" title="секция как работаем">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="7">
+        <a href="#order" class="pagescroll__link" title="секция форма">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+      <li class="pagescroll__item" data-scroll-to="8">
+        <a href="#map" class="pagescroll__link" title="секция контакты">
+          <div class="pagescroll__link-block"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <nav class="fixed-menu">
-      <div class="fixed-menu__logo">
-        <svg class="logo__pic">
-          <use xlink:href="images/sprite.svg#logo"></use>
-        </svg>
+  <nav class="fixed-menu">
+    <div class="fixed-menu__logo">
+      <svg class="logo__pic">
+        <use xlink:href="images/sprite.svg#logo"></use>
+      </svg>
+    </div>
+    <button class="fixed-menu__close">
+      <svg class="fixed-menu__close-icon">
+        <use xlink:href="images/sprite.svg#cross"></use>
+      </svg>
+    </button>
+
+    <div class="fixed-menu__container">
+      <ul class="fixed-menu__list">
+        <li class="fixed-menu__item fixed-menu__item--disable">
+          <a href="#best" class="fixed-menu__item-link" data-scroll-to="1">о нас</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#burgers" class="fixed-menu__item-link" data-scroll-to="2">бургеры</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#team" class="fixed-menu__item-link" data-scroll-to="3">команда</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#menu" class="fixed-menu__item-link" data-scroll-to="4">меню</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#reviews" class="fixed-menu__item-link" data-scroll-to="5">отзывы</a>
+        </li>
+        <li class="fixed-menu__item ">
+          <a href="#map" class="fixed-menu__item-link" data-scroll-to="8">контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="reviews--overlay">
+    <div class="reviews__container">
+      <h3 class="reviews__title">Константин </h3>
+      <div class="reviews__text">
+        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
+        забыть...
       </div>
-      <button class="fixed-menu__close">
+      <button class="reviews-close">
         <svg class="fixed-menu__close-icon">
           <use xlink:href="images/sprite.svg#cross"></use>
         </svg>
       </button>
-
-      <div class="fixed-menu__container">
-        <ul class="fixed-menu__list">
-          <li class="fixed-menu__item fixed-menu__item--disable">
-            <a href="#best" class="fixed-menu__item-link">о нас</a>
-          </li>
-          <li class="fixed-menu__item ">
-            <a href="#burgers" class="fixed-menu__item-link">бургеры</a>
-          </li>
-          <li class="fixed-menu__item ">
-            <a href="#team" class="fixed-menu__item-link">команда</a>
-          </li>
-          <li class="fixed-menu__item ">
-            <a href="#menu" class="fixed-menu__item-link">меню</a>
-          </li>
-          <li class="fixed-menu__item ">
-            <a href="#reviews" class="fixed-menu__item-link">отзывы</a>
-          </li>
-          <li class="fixed-menu__item ">
-            <a href="#map" class="fixed-menu__item-link">контакты</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="reviews--overlay">
-      <div class="reviews__container">
-        <h3 class="reviews__title">Константин </h3>
-        <div class="reviews__text">
-          Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
-          забыть...
-        </div>
-        <button class="reviews-close">
-          <svg class="fixed-menu__close-icon">
-            <use xlink:href="images/sprite.svg#cross"></use>
-          </svg>
-        </button>
-      </div>
     </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="bxslider/jquery.bxslider.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="js/common.js" type="text/javascript"></script>
-    <script src="js/map.js" type="text/javascript"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="js/player.js"> </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="bxslider/jquery.bxslider.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/common.js" type="text/javascript"></script>
+  <script src="js/map.js" type="text/javascript"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/player.js"> </script>
 </body>
 
 </html>

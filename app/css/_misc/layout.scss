@@ -23,8 +23,15 @@ body {
 
 .wrap {
   position: relative;
-  min-height: 100%;
+  //min-height: 100%;
   overflow: hidden;
+  height: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transform: translateY(0);
+  transition: 1s;
 }
 
 .container {
